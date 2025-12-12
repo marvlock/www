@@ -11,9 +11,7 @@ export function AppWrapper({ children }: AppWrapperProps) {
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
-    // Simulate initial app loading
     const timer = setTimeout(() => {
-      // The loading screen will handle its own progress and completion
     }, 100)
 
     return () => clearTimeout(timer)

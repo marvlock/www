@@ -10,7 +10,6 @@ export function useNavigationLoading() {
   const navigateWithLoading = (href: string, delay: number = 500) => {
     setIsLoading(true)
     
-    // Simulate loading time for better UX
     setTimeout(() => {
       router.push(href)
       setIsLoading(false)
