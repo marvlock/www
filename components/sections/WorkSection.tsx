@@ -14,7 +14,7 @@ export function WorkSection() {
     if (!container) return
 
     let scrollPosition = 0
-    const scrollSpeed = 0.5
+    const scrollSpeed = 1.5
     let animationFrameId: number
     let isScrolling = true
 
@@ -73,20 +73,20 @@ export function WorkSection() {
           className="space-y-12 sm:space-y-16"
         >
           <motion.div variants={animationVariants.slideUp} className="max-w-3xl mx-auto text-center">
-            <div className="inline-block px-4 py-1.5 rounded-full bg-[#F1F5F9] border border-[#E2E8F0] mb-6">
-              <span className="text-sm font-medium text-[#0E1117]">Our Work</span>
+            <div className="inline-block px-4 py-1.5 rounded-full bg-[#F1F5F9] dark:bg-gray-900 border border-[#E2E8F0] dark:border-gray-800 mb-6">
+              <span className="text-sm font-medium text-[#0E1117] dark:text-white">Our Work</span>
             </div>
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-medium leading-tight text-[#0E1117] mb-4">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-medium leading-tight text-[#0E1117] dark:text-white mb-4">
               Our Projects
             </h2>
-            <p className="text-lg sm:text-xl text-[#64748B]">
+            <p className="text-lg sm:text-xl text-[#64748B] dark:text-gray-400">
               A comprehensive showcase of our work including UI/UX designs, full-stack applications, freelance projects, and more.
             </p>
           </motion.div>
 
           <div className="relative">
-            <div className="absolute left-0 top-0 bottom-0 w-20 sm:w-32 bg-gradient-to-r from-white to-transparent pointer-events-none z-20"></div>
-            <div className="absolute right-0 top-0 bottom-0 w-20 sm:w-32 bg-gradient-to-l from-white to-transparent pointer-events-none z-20"></div>
+            <div className="absolute left-0 top-0 bottom-0 w-20 sm:w-32 bg-gradient-to-r from-white dark:from-[#0E1117] to-transparent pointer-events-none z-20"></div>
+            <div className="absolute right-0 top-0 bottom-0 w-20 sm:w-32 bg-gradient-to-l from-white dark:from-[#0E1117] to-transparent pointer-events-none z-20"></div>
             
             <div 
               ref={scrollContainerRef}
@@ -98,7 +98,7 @@ export function WorkSection() {
                 <motion.div
                   key={index}
                   variants={animationVariants.slideUp}
-                  className="bg-white rounded-2xl border border-[#E2E8F0] p-0 w-[260px] sm:w-[300px] flex flex-col hover:shadow-xl transition-shadow cursor-pointer group overflow-hidden flex-shrink-0 project-card"
+                  className="bg-white dark:bg-gray-900 rounded-2xl border border-[#E2E8F0] dark:border-gray-800 p-0 w-[260px] sm:w-[300px] flex flex-col hover:shadow-xl transition-shadow cursor-pointer group overflow-hidden flex-shrink-0 project-card"
                   whileHover={{ y: -8, scale: 1.02 }}
                   transition={{ type: "spring", stiffness: 400, damping: 25 }}
                 >
@@ -129,11 +129,11 @@ export function WorkSection() {
                       </span>
                     </div>
 
-                    <h3 className="text-2xl sm:text-3xl font-medium text-[#0E1117]">
+                    <h3 className="text-2xl sm:text-3xl font-medium text-[#0E1117] dark:text-white">
                       {project.name}
                     </h3>
 
-                    <p className="text-sm text-[#64748B] leading-relaxed line-clamp-2">
+                    <p className="text-sm text-[#64748B] dark:text-gray-400 leading-relaxed line-clamp-2">
                       {project.description}
                     </p>
 
@@ -141,7 +141,7 @@ export function WorkSection() {
                       {project.stack.slice(0, 3).map((tech, techIndex) => (
                         <span
                           key={techIndex}
-                          className="px-3 py-1.5 bg-gray-100 rounded-full text-xs font-medium text-[#64748B]"
+                          className="px-3 py-1.5 bg-gray-100 dark:bg-gray-800 rounded-full text-xs font-medium text-[#64748B] dark:text-gray-400"
                         >
                           {tech}
                         </span>
@@ -154,7 +154,7 @@ export function WorkSection() {
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={(e) => e.stopPropagation()}
-                        className="flex items-center gap-1 text-sm font-medium text-[#0E1117] hover:text-[#64748B] transition-colors mt-2"
+                        className="flex items-center gap-1 text-sm font-medium text-[#0E1117] dark:text-white hover:text-[#64748B] dark:hover:text-gray-400 transition-colors mt-2"
                       >
                         Live Preview
                         <ExternalLink className="w-4 h-4" />
@@ -167,7 +167,7 @@ export function WorkSection() {
                 <motion.div
                   key={`duplicate-${index}`}
                   variants={animationVariants.slideUp}
-                  className="bg-white rounded-2xl border border-[#E2E8F0] p-0 w-[260px] sm:w-[300px] flex flex-col hover:shadow-xl transition-shadow cursor-pointer group overflow-hidden flex-shrink-0 project-card"
+                  className="bg-white dark:bg-gray-900 rounded-2xl border border-[#E2E8F0] dark:border-gray-800 p-0 w-[260px] sm:w-[300px] flex flex-col hover:shadow-xl transition-shadow cursor-pointer group overflow-hidden flex-shrink-0 project-card"
                   whileHover={{ y: -8, scale: 1.02 }}
                   transition={{ type: "spring", stiffness: 400, damping: 25 }}
                 >
@@ -206,7 +206,7 @@ export function WorkSection() {
                       {project.stack.slice(0, 3).map((tech, techIndex) => (
                         <span
                           key={techIndex}
-                          className="px-3 py-1.5 bg-gray-100 rounded-full text-xs font-medium text-[#64748B]"
+                          className="px-3 py-1.5 bg-gray-100 dark:bg-gray-800 rounded-full text-xs font-medium text-[#64748B] dark:text-gray-400"
                         >
                           {tech}
                         </span>
@@ -218,7 +218,7 @@ export function WorkSection() {
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={(e) => e.stopPropagation()}
-                        className="flex items-center gap-1 text-sm font-medium text-[#0E1117] hover:text-[#64748B] transition-colors mt-2"
+                        className="flex items-center gap-1 text-sm font-medium text-[#0E1117] dark:text-white hover:text-[#64748B] dark:hover:text-gray-400 transition-colors mt-2"
                       >
                         Live Preview
                         <ExternalLink className="w-4 h-4" />
@@ -231,7 +231,7 @@ export function WorkSection() {
                 <motion.div
                   key={`duplicate-2-${index}`}
                   variants={animationVariants.slideUp}
-                  className="bg-white rounded-2xl border border-[#E2E8F0] p-0 w-[260px] sm:w-[300px] flex flex-col hover:shadow-xl transition-shadow cursor-pointer group overflow-hidden flex-shrink-0 project-card"
+                  className="bg-white dark:bg-gray-900 rounded-2xl border border-[#E2E8F0] dark:border-gray-800 p-0 w-[260px] sm:w-[300px] flex flex-col hover:shadow-xl transition-shadow cursor-pointer group overflow-hidden flex-shrink-0 project-card"
                   whileHover={{ y: -8, scale: 1.02 }}
                   transition={{ type: "spring", stiffness: 400, damping: 25 }}
                 >
@@ -270,7 +270,7 @@ export function WorkSection() {
                       {project.stack.slice(0, 3).map((tech, techIndex) => (
                         <span
                           key={techIndex}
-                          className="px-3 py-1.5 bg-gray-100 rounded-full text-xs font-medium text-[#64748B]"
+                          className="px-3 py-1.5 bg-gray-100 dark:bg-gray-800 rounded-full text-xs font-medium text-[#64748B] dark:text-gray-400"
                         >
                           {tech}
                         </span>
@@ -282,7 +282,7 @@ export function WorkSection() {
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={(e) => e.stopPropagation()}
-                        className="flex items-center gap-1 text-sm font-medium text-[#0E1117] hover:text-[#64748B] transition-colors mt-2"
+                        className="flex items-center gap-1 text-sm font-medium text-[#0E1117] dark:text-white hover:text-[#64748B] dark:hover:text-gray-400 transition-colors mt-2"
                       >
                         Live Preview
                         <ExternalLink className="w-4 h-4" />

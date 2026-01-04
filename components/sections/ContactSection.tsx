@@ -17,13 +17,13 @@ export function ContactSection() {
         >
           <motion.div variants={animationVariants.slideUp} className="space-y-4 sm:space-y-6">
             <h2 
-              className="text-5xl sm:text-6xl md:text-7xl font-bold leading-tight text-[#0E1117]"
+              className="text-5xl sm:text-6xl md:text-7xl font-bold leading-tight text-[#0E1117] dark:text-white"
               style={{ fontFamily: 'var(--font-body)' }}
             >
               Ready to scale?
             </h2>
             <p 
-              className="text-lg sm:text-xl text-[#64748B] max-w-2xl mx-auto"
+              className="text-lg sm:text-xl text-[#64748B] dark:text-gray-400 max-w-2xl mx-auto"
               style={{ fontFamily: 'var(--font-body)' }}
             >
               Join the high-performing teams building the future with Project Marvlock.
@@ -38,7 +38,7 @@ export function ContactSection() {
               href={`mailto:${CONTACT_EMAIL}?subject=New Project Inquiry`}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="px-8 py-3 bg-[#0E1117] text-white rounded-full font-medium text-base sm:text-lg shadow-lg hover:bg-[#0E1117]/90 transition-all cursor-pointer"
+              className="px-8 py-3 bg-[#0E1117] dark:bg-white dark:text-[#0E1117] text-white rounded-full font-medium text-base sm:text-lg shadow-lg hover:bg-[#0E1117]/90 dark:hover:bg-white/90 transition-all cursor-pointer"
               style={{ fontFamily: 'var(--font-body)' }}
             >
               Get Started Now
@@ -48,7 +48,7 @@ export function ContactSection() {
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ opacity: 0.7 }}
-              className="text-base sm:text-lg text-[#0E1117] font-normal cursor-pointer"
+              className="text-base sm:text-lg text-[#0E1117] dark:text-white font-normal cursor-pointer"
               style={{ fontFamily: 'var(--font-body)' }}
             >
               Book a demo

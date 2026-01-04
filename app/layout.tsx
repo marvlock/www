@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import { AppWrapper } from '@/components/ui/app-wrapper'
+import { ThemeProvider } from '@/components/theme-provider'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://marvlock.dev'),
@@ -37,7 +38,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <style>{`
 html {
@@ -46,10 +47,12 @@ html {
 }
         `}</style>
       </head>
-      <body className="dark">
-        <AppWrapper>
-          {children}
-        </AppWrapper>
+      <body>
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
+          <AppWrapper>
+            {children}
+          </AppWrapper>
+        </ThemeProvider>
       </body>
     </html>
   )

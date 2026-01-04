@@ -59,14 +59,14 @@ export function ServicesSection() {
               />
             </div>
             <div className="flex gap-2">
-              <div className="w-8 h-8 bg-gray-200 rounded-lg flex items-center justify-center overflow-hidden">
+              <div className="w-8 h-8 bg-gray-200 dark:bg-gray-800 rounded-lg flex items-center justify-center overflow-hidden">
                 <img 
                   src="https://vz1c70bqc3.ufs.sh/f/xvyiJUSZFkzWeZsMVsPp4qSfeuNw5YcsZMALGrJIjO97Cy8H" 
                   alt="AI" 
                   className="w-full h-full object-contain"
                 />
               </div>
-              <div className="w-8 h-8 bg-gray-200 rounded-lg flex items-center justify-center overflow-hidden">
+              <div className="w-8 h-8 bg-gray-200 dark:bg-gray-800 rounded-lg flex items-center justify-center overflow-hidden">
                 <img 
                   src="https://vz1c70bqc3.ufs.sh/f/xvyiJUSZFkzWzmSfUYioaCjdrBhpmGy7Te6F9ZUlckQtuNSI" 
                   alt="Figma" 
@@ -88,14 +88,14 @@ export function ServicesSection() {
               />
             </div>
             <div className="flex gap-2">
-              <div className="w-8 h-8 bg-gray-200 rounded-lg flex items-center justify-center overflow-hidden">
+              <div className="w-8 h-8 bg-gray-200 dark:bg-gray-800 rounded-lg flex items-center justify-center overflow-hidden">
                 <img 
                   src="https://vz1c70bqc3.ufs.sh/f/xvyiJUSZFkzWzmSfUYioaCjdrBhpmGy7Te6F9ZUlckQtuNSI" 
                   alt="Figma" 
                   className="w-full h-full object-contain"
                 />
               </div>
-              <div className="w-8 h-8 bg-gray-200 rounded-lg flex items-center justify-center overflow-hidden">
+              <div className="w-8 h-8 bg-gray-200 dark:bg-gray-800 rounded-lg flex items-center justify-center overflow-hidden">
                 <img 
                   src="https://vz1c70bqc3.ufs.sh/f/xvyiJUSZFkzWv4VgfA7GBOtCH3IarZi1WRn6om4PwEyVhsgS" 
                   alt="Framer" 
@@ -117,21 +117,21 @@ export function ServicesSection() {
               />
             </div>
             <div className="flex gap-2">
-              <div className="w-8 h-8 bg-gray-200 rounded-lg flex items-center justify-center overflow-hidden">
+              <div className="w-8 h-8 bg-gray-200 dark:bg-gray-800 rounded-lg flex items-center justify-center overflow-hidden">
                 <img 
                   src="https://vz1c70bqc3.ufs.sh/f/xvyiJUSZFkzWzmSfUYioaCjdrBhpmGy7Te6F9ZUlckQtuNSI" 
                   alt="Figma" 
                   className="w-full h-full object-contain"
                 />
               </div>
-              <div className="w-8 h-8 bg-gray-200 rounded-lg flex items-center justify-center overflow-hidden">
+              <div className="w-8 h-8 bg-gray-200 dark:bg-gray-800 rounded-lg flex items-center justify-center overflow-hidden">
                 <img 
                   src="https://vz1c70bqc3.ufs.sh/f/xvyiJUSZFkzW3pFhhMe21QOI0roAJCzZXBmwha4RS9Ptxueq" 
                   alt="Notion" 
                   className="w-full h-full object-contain"
                 />
               </div>
-              <div className="w-8 h-8 bg-gray-200 rounded-lg flex items-center justify-center overflow-hidden">
+              <div className="w-8 h-8 bg-gray-200 dark:bg-gray-800 rounded-lg flex items-center justify-center overflow-hidden">
                 <img 
                   src="https://vz1c70bqc3.ufs.sh/f/xvyiJUSZFkzWo5s9T1NCsSpH2FPtymi6KkbXJgAdw7LM1YDr" 
                   alt="Linear" 
@@ -153,21 +153,21 @@ export function ServicesSection() {
               />
             </div>
             <div className="flex gap-2">
-              <div className="w-8 h-8 bg-gray-200 rounded-lg flex items-center justify-center overflow-hidden">
+              <div className="w-8 h-8 bg-gray-200 dark:bg-gray-800 rounded-lg flex items-center justify-center overflow-hidden">
                 <img 
                   src="https://vz1c70bqc3.ufs.sh/f/xvyiJUSZFkzWEAtfUPo9A46PCmS5D8fnQkOsi3RKX7VbzcrH" 
                   alt="Coding" 
                   className="w-full h-full object-contain"
                 />
               </div>
-              <div className="w-8 h-8 bg-gray-200 rounded-lg flex items-center justify-center overflow-hidden">
+              <div className="w-8 h-8 bg-gray-200 dark:bg-gray-800 rounded-lg flex items-center justify-center overflow-hidden">
                 <img 
                   src="https://vz1c70bqc3.ufs.sh/f/xvyiJUSZFkzWv4VgfA7GBOtCH3IarZi1WRn6om4PwEyVhsgS" 
                   alt="Framer" 
                   className="w-full h-full object-contain"
                 />
               </div>
-              <div className="w-8 h-8 bg-gray-200 rounded-lg flex items-center justify-center overflow-hidden">
+              <div className="w-8 h-8 bg-gray-200 dark:bg-gray-800 rounded-lg flex items-center justify-center overflow-hidden">
                 <img 
                   src="https://vz1c70bqc3.ufs.sh/f/xvyiJUSZFkzW52x8xHE9xs5uJUKrLyqc2advWBVG3kenhflj" 
                   alt="Webflow" 
@@ -189,21 +189,21 @@ export function ServicesSection() {
               />
             </div>
             <div className="flex gap-2">
-              <div className="w-8 h-8 bg-gray-200 rounded-lg flex items-center justify-center overflow-hidden">
-                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <div className="w-8 h-8 bg-gray-200 dark:bg-gray-800 rounded-lg flex items-center justify-center overflow-hidden">
+                <svg className="w-5 h-5 text-[#0E1117] dark:text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect x="7" y="2" width="10" height="20" rx="2" stroke="currentColor" strokeWidth="2" fill="none"/>
                   <rect x="9" y="5" width="6" height="10" rx="1" fill="currentColor" opacity="0.3"/>
                   <circle cx="12" cy="17" r="1" fill="currentColor"/>
                 </svg>
               </div>
-              <div className="w-8 h-8 bg-gray-200 rounded-lg flex items-center justify-center overflow-hidden">
+              <div className="w-8 h-8 bg-gray-200 dark:bg-gray-800 rounded-lg flex items-center justify-center overflow-hidden">
                 <img 
                   src="https://vz1c70bqc3.ufs.sh/f/xvyiJUSZFkzWv4VgfA7GBOtCH3IarZi1WRn6om4PwEyVhsgS" 
                   alt="Framer" 
                   className="w-full h-full object-contain"
                 />
               </div>
-              <div className="w-8 h-8 bg-gray-200 rounded-lg flex items-center justify-center overflow-hidden">
+              <div className="w-8 h-8 bg-gray-200 dark:bg-gray-800 rounded-lg flex items-center justify-center overflow-hidden">
                 <img 
                   src="https://vz1c70bqc3.ufs.sh/f/xvyiJUSZFkzWEAtfUPo9A46PCmS5D8fnQkOsi3RKX7VbzcrH" 
                   alt="Coding" 
@@ -225,7 +225,7 @@ export function ServicesSection() {
               />
             </div>
             <div className="flex gap-2">
-              <div className="w-8 h-8 bg-gray-200 rounded-lg flex items-center justify-center overflow-hidden">
+              <div className="w-8 h-8 bg-gray-200 dark:bg-gray-800 rounded-lg flex items-center justify-center overflow-hidden">
                 <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect x="2" y="2" width="9" height="9" fill="#00A4EF"/>
                   <rect x="13" y="2" width="9" height="9" fill="#00A4EF"/>
@@ -233,7 +233,7 @@ export function ServicesSection() {
                   <rect x="13" y="13" width="9" height="9" fill="#00A4EF"/>
                 </svg>
               </div>
-              <div className="w-8 h-8 bg-gray-200 rounded-lg flex items-center justify-center overflow-hidden">
+              <div className="w-8 h-8 bg-gray-200 dark:bg-gray-800 rounded-lg flex items-center justify-center overflow-hidden">
                 <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect x="3" y="4" width="18" height="14" rx="1" fill="#D83B01"/>
                   <rect x="5" y="7" width="14" height="2" fill="white" opacity="0.8"/>
@@ -261,10 +261,10 @@ export function ServicesSection() {
           className="space-y-16 sm:space-y-20"
         >
           <motion.div variants={animationVariants.slideUp} className="text-center max-w-3xl mx-auto">
-            <div className="inline-block px-4 py-1.5 rounded-full bg-[#F1F5F9] border border-[#E2E8F0] mb-6">
-              <span className="text-sm font-medium text-[#0E1117]">Our Services</span>
+            <div className="inline-block px-4 py-1.5 rounded-full bg-[#F1F5F9] dark:bg-gray-900 border border-[#E2E8F0] dark:border-gray-800 mb-6">
+              <span className="text-sm font-medium text-[#0E1117] dark:text-white">Our Services</span>
             </div>
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-medium leading-tight mb-4 text-[#0E1117]">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-medium leading-tight mb-4 text-[#0E1117] dark:text-white">
               Anything you need. Done for you.
             </h2>
           </motion.div>
@@ -274,7 +274,7 @@ export function ServicesSection() {
               <motion.div
                 key={index}
                 variants={animationVariants.slideUp}
-                className="p-6 sm:p-8 rounded-2xl border border-[#E2E8F0] bg-white cursor-pointer"
+                className="p-6 sm:p-8 rounded-2xl border border-[#E2E8F0] dark:border-gray-800 bg-white dark:bg-gray-900 cursor-pointer"
                 whileHover={{ y: -12, scale: 1.03 }}
                 transition={{ type: "spring", stiffness: 400, damping: 25 }}
               >
@@ -282,10 +282,10 @@ export function ServicesSection() {
                   {renderIllustration(service.illustration)}
                 </div>
                 <div className="text-center">
-                  <h3 className="text-xl sm:text-2xl font-medium text-[#0E1117] mb-3">
+                  <h3 className="text-xl sm:text-2xl font-medium text-[#0E1117] dark:text-white mb-3">
                     {service.title}
                   </h3>
-                  <p className="text-base text-[#64748B] leading-relaxed">
+                  <p className="text-base text-[#64748B] dark:text-gray-400 leading-relaxed">
                     {service.description}
                   </p>
                 </div>

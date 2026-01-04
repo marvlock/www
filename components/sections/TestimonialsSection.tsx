@@ -56,7 +56,7 @@ export function TestimonialsSection() {
     if (!container) return
 
     let scrollPosition = 0
-    const scrollSpeed = 0.5
+    const scrollSpeed = 1.5
     let animationFrameId: number
     let isScrolling = true
 
@@ -115,17 +115,17 @@ export function TestimonialsSection() {
           className="space-y-12 sm:space-y-16"
         >
           <motion.div variants={animationVariants.slideUp} className="text-center max-w-3xl mx-auto">
-            <div className="inline-block px-4 py-1.5 rounded-full bg-[#F1F5F9] border border-[#E2E8F0] mb-6">
-              <span className="text-sm font-medium text-[#0E1117]">Testimonials</span>
+            <div className="inline-block px-4 py-1.5 rounded-full bg-[#F1F5F9] dark:bg-gray-900 border border-[#E2E8F0] dark:border-gray-800 mb-6">
+              <span className="text-sm font-medium text-[#0E1117] dark:text-white">Testimonials</span>
             </div>
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-medium leading-tight mb-4 text-[#0E1117]">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-medium leading-tight mb-4 text-[#0E1117] dark:text-white">
               Don't Take Our Word. Take Their's.
             </h2>
           </motion.div>
 
           <div className="relative">
-            <div className="absolute left-0 top-0 bottom-0 w-20 sm:w-32 bg-gradient-to-r from-white to-transparent pointer-events-none z-20"></div>
-            <div className="absolute right-0 top-0 bottom-0 w-20 sm:w-32 bg-gradient-to-l from-white to-transparent pointer-events-none z-20"></div>
+            <div className="absolute left-0 top-0 bottom-0 w-20 sm:w-32 bg-gradient-to-r from-white dark:from-[#0E1117] to-transparent pointer-events-none z-20"></div>
+            <div className="absolute right-0 top-0 bottom-0 w-20 sm:w-32 bg-gradient-to-l from-white dark:from-[#0E1117] to-transparent pointer-events-none z-20"></div>
             
             <div 
               ref={scrollContainerRef}
@@ -137,7 +137,7 @@ export function TestimonialsSection() {
                   <motion.div
                     key={index}
                     variants={animationVariants.slideUp}
-                    className="p-8 rounded-2xl border border-[#E2E8F0] bg-white hover:shadow-xl transition-all flex-shrink-0 testimonial-card w-[320px] sm:w-[380px]"
+                    className="p-8 rounded-2xl border border-[#E2E8F0] dark:border-gray-800 bg-white dark:bg-gray-900 hover:shadow-xl transition-all flex-shrink-0 testimonial-card w-[320px] sm:w-[380px]"
                   >
                     <div className="flex items-start gap-3 mb-6">
                       <img 
@@ -146,12 +146,12 @@ export function TestimonialsSection() {
                         className="w-14 h-14 rounded-full object-cover flex-shrink-0"
                       />
                       <div>
-                        <p className="font-semibold text-[#0E1117] text-lg mb-1">{testimonial.author}</p>
-                        <p className="text-sm text-[#64748B]">{testimonial.role}</p>
+                        <p className="font-semibold text-[#0E1117] dark:text-white text-lg mb-1">{testimonial.author}</p>
+                        <p className="text-sm text-[#64748B] dark:text-gray-400">{testimonial.role}</p>
                       </div>
                     </div>
                     
-                    <p className="text-base text-[#64748B] leading-relaxed mb-6">
+                    <p className="text-base text-[#64748B] dark:text-gray-400 leading-relaxed mb-6">
                       "{testimonial.quote}"
                     </p>
                     
@@ -166,7 +166,7 @@ export function TestimonialsSection() {
                   <motion.div
                     key={`duplicate-${index}`}
                     variants={animationVariants.slideUp}
-                    className="p-8 rounded-2xl border border-[#E2E8F0] bg-white hover:shadow-xl transition-all flex-shrink-0 testimonial-card w-[320px] sm:w-[380px]"
+                    className="p-8 rounded-2xl border border-[#E2E8F0] dark:border-gray-800 bg-white dark:bg-gray-900 hover:shadow-xl transition-all flex-shrink-0 testimonial-card w-[320px] sm:w-[380px]"
                   >
                     <div className="flex items-start gap-3 mb-6">
                       <img 
@@ -175,12 +175,12 @@ export function TestimonialsSection() {
                         className="w-14 h-14 rounded-full object-cover flex-shrink-0"
                       />
                       <div>
-                        <p className="font-semibold text-[#0E1117] text-lg mb-1">{testimonial.author}</p>
-                        <p className="text-sm text-[#64748B]">{testimonial.role}</p>
+                        <p className="font-semibold text-[#0E1117] dark:text-white text-lg mb-1">{testimonial.author}</p>
+                        <p className="text-sm text-[#64748B] dark:text-gray-400">{testimonial.role}</p>
                       </div>
                     </div>
                     
-                    <p className="text-base text-[#64748B] leading-relaxed mb-6">
+                    <p className="text-base text-[#64748B] dark:text-gray-400 leading-relaxed mb-6">
                       "{testimonial.quote}"
                     </p>
                     
@@ -195,7 +195,7 @@ export function TestimonialsSection() {
                   <motion.div
                     key={`duplicate-2-${index}`}
                     variants={animationVariants.slideUp}
-                    className="p-8 rounded-2xl border border-[#E2E8F0] bg-white hover:shadow-xl transition-all flex-shrink-0 testimonial-card w-[320px] sm:w-[380px]"
+                    className="p-8 rounded-2xl border border-[#E2E8F0] dark:border-gray-800 bg-white dark:bg-gray-900 hover:shadow-xl transition-all flex-shrink-0 testimonial-card w-[320px] sm:w-[380px]"
                   >
                     <div className="flex items-start gap-3 mb-6">
                       <img 
@@ -204,12 +204,12 @@ export function TestimonialsSection() {
                         className="w-14 h-14 rounded-full object-cover flex-shrink-0"
                       />
                       <div>
-                        <p className="font-semibold text-[#0E1117] text-lg mb-1">{testimonial.author}</p>
-                        <p className="text-sm text-[#64748B]">{testimonial.role}</p>
+                        <p className="font-semibold text-[#0E1117] dark:text-white text-lg mb-1">{testimonial.author}</p>
+                        <p className="text-sm text-[#64748B] dark:text-gray-400">{testimonial.role}</p>
                       </div>
                     </div>
                     
-                    <p className="text-base text-[#64748B] leading-relaxed mb-6">
+                    <p className="text-base text-[#64748B] dark:text-gray-400 leading-relaxed mb-6">
                       "{testimonial.quote}"
                     </p>
                     

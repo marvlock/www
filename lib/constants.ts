@@ -52,7 +52,7 @@ export const PROJECTS = [
     imageUrl: "https://vz1c70bqc3.ufs.sh/f/xvyiJUSZFkzW2Qdk6kW8FvUfYPLoDnk5m4EWIh9GduC6X7Q1"
   },
   {
-    name: "Ghostform",
+    name: "GhostForm",
     description: "A privacy-first form builder with server-side validation, rate limiting, and zero tracking.",
     stack: ["FULL-STACK", "Nuxt", "MongoDB", "TypeScript"],
     githubUrl: "https://github.com/marvlock/ghostform",
