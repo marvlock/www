@@ -31,8 +31,8 @@ export function HeroSection() {
             style={{ fontFamily: 'var(--font-body)' }}
           >
             <div className="flex flex-col items-center">
-              <span className="whitespace-nowrap">We Build Web & Mobile Apps</span>
-              <span className="whitespace-nowrap">That Users Actually Want to Use</span>
+              <span className="whitespace-nowrap sm:whitespace-normal text-center">We Build Web & Mobile Apps</span>
+              <span className="whitespace-nowrap sm:whitespace-normal text-center">That Users Actually Want to Use</span>
             </div>
           </motion.h1>
           
