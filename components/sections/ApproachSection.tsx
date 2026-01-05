@@ -71,10 +71,10 @@ export function ApproachSection() {
                 </div>
               </div>
               <div className="text-center">
-                <h3 className="text-xl sm:text-2xl font-medium text-[#0E1117] mb-3">
+                <h3 className="text-xl sm:text-2xl font-medium text-[#0E1117] dark:text-white mb-3">
                   World-Class Design
                 </h3>
-                <p className="text-base text-[#64748B] leading-relaxed">
+                <p className="text-base text-[#64748B] dark:text-gray-400 leading-relaxed">
                   Aesthetic isn't just decoration. We create emotionally resonant visual systems that build trust instantly.
                 </p>
               </div>

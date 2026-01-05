@@ -14,7 +14,7 @@ export function WorkSection() {
     if (!container) return
 
     let scrollPosition = 0
-    const scrollSpeed = 1.5
+    const scrollSpeed = 0.5
     let animationFrameId: number
     let isScrolling = true
 
@@ -115,7 +115,7 @@ export function WorkSection() {
                         <div className="text-center relative z-10 flex items-center justify-center h-full">
                           <div>
                             <div className="text-4xl mb-1">🚀</div>
-                            <div className="text-xs text-[#64748B] font-medium">Project Preview</div>
+                            <div className="text-xs text-[#64748B] dark:text-gray-400 font-medium">Project Preview</div>
                           </div>
                         </div>
                       </>
@@ -184,22 +184,22 @@ export function WorkSection() {
                         <div className="text-center relative z-10 flex items-center justify-center h-full">
                           <div>
                             <div className="text-4xl mb-1">🚀</div>
-                            <div className="text-xs text-[#64748B] font-medium">Project Preview</div>
+                            <div className="text-xs text-[#64748B] dark:text-gray-400 font-medium">Project Preview</div>
                           </div>
                         </div>
                       </>
                     )}
                   </div>
                   <div className="p-4 sm:p-6 flex flex-col space-y-3">
-                    <div className="px-3 py-1 bg-gray-100 rounded-full w-fit">
-                      <span className="text-xs font-medium text-[#64748B] uppercase tracking-wider">
+                    <div className="px-3 py-1 bg-gray-100 dark:bg-gray-800 rounded-full w-fit">
+                      <span className="text-xs font-medium text-[#64748B] dark:text-gray-400 uppercase tracking-wider">
                         {project.stack[0] || "Project"}
                       </span>
                     </div>
-                    <h3 className="text-2xl sm:text-3xl font-medium text-[#0E1117]">
+                    <h3 className="text-2xl sm:text-3xl font-medium text-[#0E1117] dark:text-white">
                       {project.name}
                     </h3>
-                    <p className="text-sm text-[#64748B] leading-relaxed line-clamp-2">
+                    <p className="text-sm text-[#64748B] dark:text-gray-400 leading-relaxed line-clamp-2">
                       {project.description}
                     </p>
                     <div className="flex flex-wrap gap-2">
@@ -248,22 +248,22 @@ export function WorkSection() {
                         <div className="text-center relative z-10 flex items-center justify-center h-full">
                           <div>
                             <div className="text-4xl mb-1">🚀</div>
-                            <div className="text-xs text-[#64748B] font-medium">Project Preview</div>
+                            <div className="text-xs text-[#64748B] dark:text-gray-400 font-medium">Project Preview</div>
                           </div>
                         </div>
                       </>
                     )}
                   </div>
                   <div className="p-4 sm:p-6 flex flex-col space-y-3">
-                    <div className="px-3 py-1 bg-gray-100 rounded-full w-fit">
-                      <span className="text-xs font-medium text-[#64748B] uppercase tracking-wider">
+                    <div className="px-3 py-1 bg-gray-100 dark:bg-gray-800 rounded-full w-fit">
+                      <span className="text-xs font-medium text-[#64748B] dark:text-gray-400 uppercase tracking-wider">
                         {project.stack[0] || "Project"}
                       </span>
                     </div>
-                    <h3 className="text-2xl sm:text-3xl font-medium text-[#0E1117]">
+                    <h3 className="text-2xl sm:text-3xl font-medium text-[#0E1117] dark:text-white">
                       {project.name}
                     </h3>
-                    <p className="text-sm text-[#64748B] leading-relaxed line-clamp-2">
+                    <p className="text-sm text-[#64748B] dark:text-gray-400 leading-relaxed line-clamp-2">
                       {project.description}
                     </p>
                     <div className="flex flex-wrap gap-2">
