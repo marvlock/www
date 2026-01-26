@@ -1,32 +1,15 @@
 "use client"
 
-import { useState, useEffect } from 'react'
-import { LoadingScreen } from './loading-screen'
+import { SmoothScrollProvider } from './smooth-scroll-provider'
 
 interface AppWrapperProps {
   children: React.ReactNode
 }
 
 export function AppWrapper({ children }: AppWrapperProps) {
-  const [isLoading, setIsLoading] = useState(true)
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-    }, 100)
-
-    return () => clearTimeout(timer)
-  }, [])
-
-  const handleLoadingComplete = () => {
-    setIsLoading(false)
-  }
-
   return (
-    <>
-      {isLoading && <LoadingScreen onLoadingComplete={handleLoadingComplete} />}
-      <div className={isLoading ? 'hidden' : 'block'}>
-        {children}
-      </div>
-    </>
+    <SmoothScrollProvider>
+      {children}
+    </SmoothScrollProvider>
   )
 } 

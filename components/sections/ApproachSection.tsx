@@ -6,7 +6,7 @@ import { Palette, Code, TrendingUp } from "lucide-react"
 
 export function ApproachSection() {
   return (
-    <section id="approach" className="py-20 sm:py-32 px-4 sm:px-6 relative z-10 bg-white dark:bg-[#0E1117] transition-colors">
+    <section id="approach" className="pt-16 sm:pt-24 pb-12 sm:pb-16 px-4 sm:px-6 relative z-10 bg-white dark:bg-transparent transition-colors">
       <div className="container mx-auto max-w-7xl w-full">
         <motion.div
           initial="initial"
@@ -15,13 +15,7 @@ export function ApproachSection() {
           variants={animationVariants.staggerContainer}
           className="space-y-12 sm:space-y-16"
         >
-          <motion.div variants={animationVariants.slideUp} className="flex justify-center mb-6">
-            <div className="px-4 py-2 border border-[#E2E8F0] dark:border-gray-800 rounded-full bg-[#F1F5F9] dark:bg-gray-900 text-sm font-medium text-[#0E1117] dark:text-white">
-              Our Approach
-            </div>
-          </motion.div>
-
-          <motion.div variants={animationVariants.slideUp} className="text-center max-w-3xl mx-auto -mt-4">
+          <motion.div variants={animationVariants.slideUp} className="text-center max-w-3xl mx-auto">
             <h2 className="text-4xl sm:text-5xl md:text-6xl font-medium leading-tight mb-4">
               <span className="text-[#0E1117] dark:text-white">Everything you need.</span>
               <br />
@@ -35,11 +29,11 @@ export function ApproachSection() {
           <div className="grid md:grid-cols-3 gap-6 sm:gap-8">
             <motion.div
               variants={animationVariants.slideUp}
-              className="bg-white dark:bg-gray-900 rounded-2xl border border-[#E2E8F0] dark:border-gray-800 p-6 sm:p-8 space-y-6 relative cursor-pointer"
+              className="bg-white dark:bg-gray-900/50 dark:backdrop-blur-sm rounded-2xl border border-[#E2E8F0] dark:border-gray-800/50 p-6 sm:p-8 space-y-6 relative cursor-pointer"
               whileHover={{ y: -12, scale: 1.03 }}
               transition={{ type: "spring", stiffness: 400, damping: 25 }}
             >
-              <div className="bg-white dark:bg-gray-800 rounded-lg border border-[#E2E8F0] dark:border-gray-700 p-4 shadow-sm relative">
+              <div className="bg-white dark:bg-gray-800/60 dark:backdrop-blur-sm rounded-lg border border-[#E2E8F0] dark:border-gray-700/50 p-4 shadow-sm relative">
                 <div className="flex items-center gap-1 mb-3">
                   <div className="w-2 h-2 rounded-full bg-red-500"></div>
                   <div className="w-2 h-2 rounded-full bg-yellow-500"></div>
@@ -66,8 +60,8 @@ export function ApproachSection() {
                 </div>
               </div>
               <div className="flex justify-center pt-2">
-                <div className="w-12 h-12 rounded-xl bg-indigo-100 flex items-center justify-center">
-                  <Palette className="w-6 h-6 text-indigo-600" />
+                <div className="w-12 h-12 rounded-xl bg-indigo-100 dark:bg-indigo-900/50 flex items-center justify-center">
+                  <Palette className="w-6 h-6 text-indigo-600 dark:text-indigo-400" />
                 </div>
               </div>
               <div className="text-center">
@@ -82,11 +76,11 @@ export function ApproachSection() {
 
             <motion.div
               variants={animationVariants.slideUp}
-              className="bg-white dark:bg-gray-900 rounded-2xl border border-[#E2E8F0] dark:border-gray-800 p-6 sm:p-8 space-y-6 relative cursor-pointer"
+              className="bg-white dark:bg-gray-900/50 dark:backdrop-blur-sm rounded-2xl border border-[#E2E8F0] dark:border-gray-800/50 p-6 sm:p-8 space-y-6 relative cursor-pointer"
               whileHover={{ y: -12, scale: 1.03 }}
               transition={{ type: "spring", stiffness: 400, damping: 25 }}
             >
-              <div className="bg-[#1E1E1E] rounded-lg border border-[#2D2D2D] p-4 shadow-sm">
+              <div className="bg-[#1E1E1E] dark:bg-gray-800/60 dark:backdrop-blur-sm rounded-lg border border-[#2D2D2D] dark:border-gray-700/50 p-4 shadow-sm">
                 <div className="flex items-center gap-1 mb-3">
                   <div className="w-2 h-2 rounded-full bg-red-500"></div>
                   <div className="w-2 h-2 rounded-full bg-yellow-500"></div>
@@ -119,11 +113,11 @@ export function ApproachSection() {
 
             <motion.div
               variants={animationVariants.slideUp}
-              className="bg-white dark:bg-gray-900 rounded-2xl border border-[#E2E8F0] dark:border-gray-800 p-6 sm:p-8 space-y-6 relative cursor-pointer"
+              className="bg-white dark:bg-gray-900/50 dark:backdrop-blur-sm rounded-2xl border border-[#E2E8F0] dark:border-gray-800/50 p-6 sm:p-8 space-y-6 relative cursor-pointer"
               whileHover={{ y: -12, scale: 1.03 }}
               transition={{ type: "spring", stiffness: 400, damping: 25 }}
             >
-              <div className="bg-white dark:bg-gray-800 rounded-lg border border-[#E2E8F0] dark:border-gray-700 p-4 shadow-sm">
+              <div className="bg-white dark:bg-gray-800/60 dark:backdrop-blur-sm rounded-lg border border-[#E2E8F0] dark:border-gray-700/50 p-4 shadow-sm">
                 <div className="flex items-center justify-between mb-3">
                   <div>
                     <div className="text-xs text-[#64748B] dark:text-gray-400 mb-1">MRR</div>
@@ -135,15 +129,15 @@ export function ApproachSection() {
                   </div>
                 </div>
                 <div className="flex items-end gap-1 h-12">
-                  <div className="flex-1 bg-[#E2E8F0] rounded-t" style={{ height: '30%' }}></div>
-                  <div className="flex-1 bg-[#E2E8F0] rounded-t" style={{ height: '40%' }}></div>
-                  <div className="flex-1 bg-[#E2E8F0] rounded-t" style={{ height: '50%' }}></div>
-                  <div className="flex-1 bg-[#0E1117] rounded-t" style={{ height: '100%' }}></div>
+                  <div className="flex-1 bg-[#E2E8F0] dark:bg-gray-700/50 rounded-t" style={{ height: '30%' }}></div>
+                  <div className="flex-1 bg-[#E2E8F0] dark:bg-gray-700/50 rounded-t" style={{ height: '40%' }}></div>
+                  <div className="flex-1 bg-[#E2E8F0] dark:bg-gray-700/50 rounded-t" style={{ height: '50%' }}></div>
+                  <div className="flex-1 bg-[#0E1117] dark:bg-gray-600 rounded-t" style={{ height: '100%' }}></div>
                 </div>
               </div>
               <div className="flex justify-center pt-2">
-                <div className="w-12 h-12 rounded-xl bg-green-100 flex items-center justify-center">
-                  <TrendingUp className="w-6 h-6 text-green-600" />
+                <div className="w-12 h-12 rounded-xl bg-green-100 dark:bg-green-900/50 flex items-center justify-center">
+                  <TrendingUp className="w-6 h-6 text-green-600 dark:text-green-400" />
                 </div>
               </div>
               <div className="text-center">

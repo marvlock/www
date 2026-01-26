@@ -14,9 +14,10 @@ export function WorkSection() {
     if (!container) return
 
     let scrollPosition = 0
-    const scrollSpeed = 0.5
+    const scrollSpeed = 0.3
     let animationFrameId: number
     let isScrolling = true
+    let isVisible = true
 
     const getSingleSetWidth = () => {
       const firstCard = container.querySelector('.project-card')
@@ -27,7 +28,7 @@ export function WorkSection() {
     }
 
     const scroll = () => {
-      if (!isScrolling) {
+      if (!isScrolling || !isVisible) {
         animationFrameId = requestAnimationFrame(scroll)
         return
       }
@@ -43,6 +44,15 @@ export function WorkSection() {
       animationFrameId = requestAnimationFrame(scroll)
     }
 
+    // Use IntersectionObserver to pause when not visible
+    const observer = new IntersectionObserver(
+      (entries) => {
+        isVisible = entries[0].isIntersecting
+      },
+      { threshold: 0.1 }
+    )
+    observer.observe(container)
+
     animationFrameId = requestAnimationFrame(scroll)
 
     const handleMouseEnter = () => {
@@ -57,13 +67,14 @@ export function WorkSection() {
 
     return () => {
       cancelAnimationFrame(animationFrameId)
+      observer.disconnect()
       container.removeEventListener('mouseenter', handleMouseEnter)
       container.removeEventListener('mouseleave', handleMouseLeave)
     }
   }, [])
 
   return (
-    <section id="work" className="py-20 sm:py-32 px-4 sm:px-6 relative z-10">
+    <section id="work" className="py-12 sm:py-16 px-4 sm:px-6 relative z-10">
       <div className="container mx-auto max-w-7xl w-full">
         <motion.div
           initial="initial"
@@ -73,9 +84,6 @@ export function WorkSection() {
           className="space-y-12 sm:space-y-16"
         >
           <motion.div variants={animationVariants.slideUp} className="max-w-3xl mx-auto text-center">
-            <div className="inline-block px-4 py-1.5 rounded-full bg-[#F1F5F9] dark:bg-gray-900 border border-[#E2E8F0] dark:border-gray-800 mb-6">
-              <span className="text-sm font-medium text-[#0E1117] dark:text-white">Our Work</span>
-            </div>
             <h2 className="text-4xl sm:text-5xl md:text-6xl font-medium leading-tight text-[#0E1117] dark:text-white mb-4">
               Our Projects
             </h2>
@@ -98,11 +106,11 @@ export function WorkSection() {
                 <motion.div
                   key={index}
                   variants={animationVariants.slideUp}
-                  className="bg-white dark:bg-gray-900 rounded-2xl border border-[#E2E8F0] dark:border-gray-800 p-0 w-[260px] sm:w-[300px] flex flex-col hover:shadow-xl transition-shadow cursor-pointer group overflow-hidden flex-shrink-0 project-card"
+                  className="bg-white dark:bg-gray-900/50 dark:backdrop-blur-sm rounded-2xl border border-[#E2E8F0] dark:border-gray-800/50 p-0 w-[260px] sm:w-[300px] flex flex-col hover:shadow-xl transition-shadow cursor-pointer group overflow-hidden flex-shrink-0 project-card"
                   whileHover={{ y: -8, scale: 1.02 }}
                   transition={{ type: "spring", stiffness: 400, damping: 25 }}
                 >
-                  <div className="w-full h-40 bg-gradient-to-br from-gray-100 via-gray-50 to-gray-100 relative overflow-hidden">
+                  <div className="w-full h-40 bg-gradient-to-br from-gray-100 via-gray-50 to-gray-100 dark:from-gray-800/50 dark:via-gray-800/30 dark:to-gray-800/50 relative overflow-hidden">
                     {project.imageUrl ? (
                       <img 
                         src={project.imageUrl} 
@@ -167,11 +175,11 @@ export function WorkSection() {
                 <motion.div
                   key={`duplicate-${index}`}
                   variants={animationVariants.slideUp}
-                  className="bg-white dark:bg-gray-900 rounded-2xl border border-[#E2E8F0] dark:border-gray-800 p-0 w-[260px] sm:w-[300px] flex flex-col hover:shadow-xl transition-shadow cursor-pointer group overflow-hidden flex-shrink-0 project-card"
+                  className="bg-white dark:bg-gray-900/50 dark:backdrop-blur-sm rounded-2xl border border-[#E2E8F0] dark:border-gray-800/50 p-0 w-[260px] sm:w-[300px] flex flex-col hover:shadow-xl transition-shadow cursor-pointer group overflow-hidden flex-shrink-0 project-card"
                   whileHover={{ y: -8, scale: 1.02 }}
                   transition={{ type: "spring", stiffness: 400, damping: 25 }}
                 >
-                  <div className="w-full h-40 bg-gradient-to-br from-gray-100 via-gray-50 to-gray-100 relative overflow-hidden">
+                  <div className="w-full h-40 bg-gradient-to-br from-gray-100 via-gray-50 to-gray-100 dark:from-gray-800/50 dark:via-gray-800/30 dark:to-gray-800/50 relative overflow-hidden">
                     {project.imageUrl ? (
                       <img 
                         src={project.imageUrl} 
@@ -231,11 +239,11 @@ export function WorkSection() {
                 <motion.div
                   key={`duplicate-2-${index}`}
                   variants={animationVariants.slideUp}
-                  className="bg-white dark:bg-gray-900 rounded-2xl border border-[#E2E8F0] dark:border-gray-800 p-0 w-[260px] sm:w-[300px] flex flex-col hover:shadow-xl transition-shadow cursor-pointer group overflow-hidden flex-shrink-0 project-card"
+                  className="bg-white dark:bg-gray-900/50 dark:backdrop-blur-sm rounded-2xl border border-[#E2E8F0] dark:border-gray-800/50 p-0 w-[260px] sm:w-[300px] flex flex-col hover:shadow-xl transition-shadow cursor-pointer group overflow-hidden flex-shrink-0 project-card"
                   whileHover={{ y: -8, scale: 1.02 }}
                   transition={{ type: "spring", stiffness: 400, damping: 25 }}
                 >
-                  <div className="w-full h-40 bg-gradient-to-br from-gray-100 via-gray-50 to-gray-100 relative overflow-hidden">
+                  <div className="w-full h-40 bg-gradient-to-br from-gray-100 via-gray-50 to-gray-100 dark:from-gray-800/50 dark:via-gray-800/30 dark:to-gray-800/50 relative overflow-hidden">
                     {project.imageUrl ? (
                       <img 
                         src={project.imageUrl} 

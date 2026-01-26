@@ -6,7 +6,7 @@ import { animationVariants, viewportOptions } from "@/lib/animations"
 
 export function ContactSection() {
   return (
-    <section id="contact" className="py-16 sm:py-24 px-4 sm:px-6 relative z-10">
+    <section id="contact" className="py-12 sm:py-16 px-4 sm:px-6 relative z-10">
       <div className="container mx-auto max-w-4xl w-full relative z-10">
         <motion.div
           initial="initial"

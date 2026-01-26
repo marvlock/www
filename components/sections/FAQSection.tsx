@@ -29,7 +29,7 @@ export function FAQSection() {
   ]
 
   return (
-    <section id="faq" className="py-16 sm:py-24 px-4 sm:px-6 relative z-10">
+    <section id="faq" className="py-12 sm:py-16 px-4 sm:px-6 relative z-10">
       <div className="container mx-auto max-w-4xl w-full">
         <motion.div
           initial="initial"
@@ -39,9 +39,6 @@ export function FAQSection() {
           className="space-y-16 sm:space-y-20"
         >
           <motion.div variants={animationVariants.slideUp} className="text-center max-w-3xl mx-auto">
-            <div className="inline-block px-4 py-1.5 rounded-full bg-[#0E1117] dark:bg-white border border-[#0E1117] dark:border-white mb-6">
-              <span className="text-sm font-medium text-white dark:text-[#0E1117] uppercase tracking-wider">FAQ</span>
-            </div>
             <h2 className="text-4xl sm:text-5xl md:text-6xl font-medium leading-tight mb-4 text-[#0E1117] dark:text-white">
               Got Questions? We've<br />
               Got Answers
@@ -57,7 +54,7 @@ export function FAQSection() {
                 <AccordionItem
                   key={index}
                   value={`item-${index}`}
-                  className="border border-[#E2E8F0] dark:border-gray-800 rounded-xl px-6 py-2 hover:border-[#0E1117] dark:hover:border-gray-600 transition-colors bg-white dark:bg-gray-900"
+                  className="border border-[#E2E8F0] dark:border-gray-800/50 rounded-xl px-6 py-2 hover:border-[#0E1117] dark:hover:border-gray-600 transition-colors bg-white dark:bg-gray-900/50 dark:backdrop-blur-sm"
                 >
                   <AccordionTrigger className="text-left text-lg font-semibold text-[#0E1117] dark:text-white hover:no-underline">
                     {faq.question}

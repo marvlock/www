@@ -20,8 +20,8 @@ export function Navigation({ isVisible }: NavigationProps) {
       <motion.nav
         initial={{ y: 0, opacity: 1 }}
         animate={{ 
-          y: isVisible ? 0 : -100,
-          opacity: isVisible ? 1 : 0
+          y: 0,
+          opacity: 1
         }}
         transition={{ duration: 0.3, ease: "easeInOut" }}
         className="fixed top-4 sm:top-6 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-2rem)] sm:max-w-2xl"

@@ -3,10 +3,21 @@
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { animationVariants } from "@/lib/animations"
+import { useLenis } from "@/components/ui/smooth-scroll-provider"
 
 export function HeroSection() {
+  const lenis = useLenis()
+
+  const handleScrollToContact = () => {
+    if (lenis) {
+      lenis.scrollTo('#contact', { offset: 0, duration: 1.5 })
+    } else {
+      document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
   return (
-    <section className="flex items-center justify-center px-4 sm:px-6 pt-24 sm:pt-40 pb-16 sm:pb-24 relative z-10 overflow-hidden min-h-[85vh]">
+    <section className="flex items-center justify-center px-4 sm:px-6 pt-20 sm:pt-32 pb-24 sm:pb-32 relative z-10 overflow-hidden min-h-screen">
 
       <div className="container mx-auto max-w-5xl w-full relative z-10">
         <motion.div
@@ -15,15 +26,6 @@ export function HeroSection() {
           variants={animationVariants.staggerContainer}
           className="text-center space-y-6 sm:space-y-8"
         >
-          <motion.div
-            variants={animationVariants.slideUp}
-            className="flex items-center justify-center gap-2"
-          >
-            <div className="flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-gray-100 dark:bg-gray-800 rounded-full">
-              <div className="w-2 h-2 bg-green-500 rounded-full animate-blink"></div>
-              <span className="text-xs sm:text-sm font-medium text-[#0E1117] dark:text-white whitespace-nowrap">Available for New Projects</span>
-            </div>
-          </motion.div>
 
           <motion.h1
             variants={animationVariants.slideUp}
@@ -52,7 +54,7 @@ export function HeroSection() {
               <Button
                 className="bg-[#0E1117] dark:bg-white dark:text-[#0E1117] text-white hover:bg-[#0E1117]/90 dark:hover:bg-white/90 px-6 sm:px-10 py-4 sm:py-6 rounded-lg transition-all cursor-pointer shadow-lg font-semibold text-sm sm:text-lg w-full sm:w-auto"
                 style={{ fontFamily: 'var(--font-body)' }}
-                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={handleScrollToContact}
               >
                 Book a Free MVP Call
               </Button>

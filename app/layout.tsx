@@ -1,7 +1,16 @@
 import type { Metadata } from 'next'
+import { Instrument_Serif } from 'next/font/google'
 import './globals.css'
 import { AppWrapper } from '@/components/ui/app-wrapper'
 import { ThemeProvider } from '@/components/theme-provider'
+
+const instrumentSerif = Instrument_Serif({
+  subsets: ['latin'],
+  weight: ['400'],
+  style: ['normal', 'italic'],
+  variable: '--font-instrument-serif',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://marvlock.dev'),
@@ -38,11 +47,12 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning className={instrumentSerif.variable}>
       <head>
         <style>{`
 html {
-  --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  --font-body: var(--font-instrument-serif), serif;
+  --font-serif: var(--font-instrument-serif);
   font-family: var(--font-body);
 }
         `}</style>

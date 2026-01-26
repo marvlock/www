@@ -251,7 +251,7 @@ export function ServicesSection() {
   }
 
   return (
-    <section id="services" className="py-20 sm:py-32 px-4 sm:px-6 relative z-10">
+    <section id="services" className="py-12 sm:py-16 px-4 sm:px-6 relative z-10">
       <div className="container mx-auto max-w-7xl w-full">
         <motion.div
           initial="initial"
@@ -261,9 +261,6 @@ export function ServicesSection() {
           className="space-y-16 sm:space-y-20"
         >
           <motion.div variants={animationVariants.slideUp} className="text-center max-w-3xl mx-auto">
-            <div className="inline-block px-4 py-1.5 rounded-full bg-[#F1F5F9] dark:bg-gray-900 border border-[#E2E8F0] dark:border-gray-800 mb-6">
-              <span className="text-sm font-medium text-[#0E1117] dark:text-white">Our Services</span>
-            </div>
             <h2 className="text-4xl sm:text-5xl md:text-6xl font-medium leading-tight mb-4 text-[#0E1117] dark:text-white">
               Anything you need. Done for you.
             </h2>
@@ -274,7 +271,7 @@ export function ServicesSection() {
               <motion.div
                 key={index}
                 variants={animationVariants.slideUp}
-                className="p-6 sm:p-8 rounded-2xl border border-[#E2E8F0] dark:border-gray-800 bg-white dark:bg-gray-900 cursor-pointer"
+                className="p-6 sm:p-8 rounded-2xl border border-[#E2E8F0] dark:border-gray-800/50 bg-white dark:bg-gray-900/50 dark:backdrop-blur-sm cursor-pointer"
                 whileHover={{ y: -12, scale: 1.03 }}
                 transition={{ type: "spring", stiffness: 400, damping: 25 }}
               >
