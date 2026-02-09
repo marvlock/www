@@ -41,30 +41,19 @@ export function Navigation({ isVisible }: NavigationProps) {
               height={20}
               className="w-5 h-5 flex-shrink-0"
             />
-            <span className="text-sm font-medium whitespace-nowrap text-[#0E1117] dark:text-white">Project Marvlock</span>
+            <span className="text-sm font-medium whitespace-nowrap text-[#0E1117] dark:text-white" style={{ fontFamily: 'var(--font-heading)' }}>Project Marvlock</span>
           </motion.a>
           
           <div className="hidden md:flex items-center gap-3 flex-shrink-0">
             <motion.a
               href="#work"
-              className="px-3 py-1.5 text-sm text-[#0E1117] dark:text-white hover:text-[#0E1117]/70 dark:hover:text-white/70 transition-colors cursor-pointer whitespace-nowrap"
-              whileHover={{ y: -1 }}
-              transition={springTransition}
-              style={{ fontFamily: 'var(--font-body)', fontWeight: 500 }}
-            >
-              Work
-            </motion.a>
-            <motion.a
-              href="https://cal.com/pranavmurali"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-4 py-2 text-sm font-medium text-white bg-[#0E1117] dark:bg-white dark:text-[#0E1117] hover:bg-[#0E1117]/90 dark:hover:bg-white/90 transition-all cursor-pointer rounded-lg shadow-sm whitespace-nowrap"
+              className="px-4 py-2 text-sm font-medium text-white bg-[#0E1117] dark:bg-white dark:text-[#0E1117] hover:bg-[#0E1117]/90 dark:hover:bg-white/90 transition-all cursor-pointer rounded-2xl shadow-sm whitespace-nowrap"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               transition={springTransition}
               style={{ fontFamily: 'var(--font-body)' }}
             >
-              Book a Call
+              Work
             </motion.a>
             <ThemeToggle />
           </div>

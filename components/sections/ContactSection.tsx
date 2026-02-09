@@ -18,7 +18,7 @@ export function ContactSection() {
           <motion.div variants={animationVariants.slideUp} className="space-y-4 sm:space-y-6">
             <h2 
               className="text-5xl sm:text-6xl md:text-7xl font-bold leading-tight text-[#0E1117] dark:text-white"
-              style={{ fontFamily: 'var(--font-body)' }}
+              style={{ fontFamily: 'var(--font-heading)' }}
             >
               Ready to scale?
             </h2>
@@ -42,16 +42,6 @@ export function ContactSection() {
               style={{ fontFamily: 'var(--font-body)' }}
             >
               Get Started Now
-            </motion.a>
-            <motion.a
-              href="https://cal.com/pranavmurali"
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{ opacity: 0.7 }}
-              className="text-base sm:text-lg text-[#0E1117] dark:text-white font-normal cursor-pointer"
-              style={{ fontFamily: 'var(--font-body)' }}
-            >
-              Book a demo
             </motion.a>
           </motion.div>
         </motion.div>

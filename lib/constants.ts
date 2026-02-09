@@ -38,7 +38,7 @@ export const PROJECTS = [
   {
     name: "NullBin",
     description: "A privacy-first, client-side encrypted pastebin alternative with a clean, modern UX. No accounts, no tracking, just secure sharing.",
-    stack: ["FULL-STACK", "Next.js 15", "React", "TypeScript", "Tailwind CSS", "MongoDB", "Web Crypto API", "Shiki"],
+    stack: ["Full-Stack", "Next.js 15", "React", "TypeScript", "Tailwind CSS", "MongoDB", "Web Crypto API", "Shiki"],
     githubUrl: "https://github.com/marvellousz/nullbin",
     liveUrl: "https://nullbin.marvlock.dev",
     imageUrl: "https://vz1c70bqc3.ufs.sh/f/xvyiJUSZFkzWrq4BprVXT1YkprDaohjJ2mtCiuHGMbLsvwSK"
@@ -46,7 +46,7 @@ export const PROJECTS = [
   {
     name: "Schedulo",
     description: "A modern web application that streamlines meeting scheduling and email communication in one unified workflow",
-    stack: ["FULL-STACK", "Next.js", "React 19", "TypeScript", "Tailwind CSS", "NextAuth.js", "Google APIs"],
+    stack: ["Full-Stack", "Next.js", "React 19", "TypeScript", "Tailwind CSS", "NextAuth.js", "Google APIs"],
     githubUrl: "https://github.com/marvellousz/schedulo",
     liveUrl: "https://schedulo.marvlock.dev",
     imageUrl: "https://vz1c70bqc3.ufs.sh/f/xvyiJUSZFkzW2Qdk6kW8FvUfYPLoDnk5m4EWIh9GduC6X7Q1"
@@ -54,7 +54,7 @@ export const PROJECTS = [
   {
     name: "GhostForm",
     description: "A privacy-first form builder with server-side validation, rate limiting, and zero tracking.",
-    stack: ["FULL-STACK", "Nuxt", "MongoDB", "TypeScript"],
+    stack: ["Full-Stack", "Nuxt", "MongoDB", "TypeScript"],
     githubUrl: "https://github.com/marvlock/ghostform",
     liveUrl: "https://ghostform.marvlock.dev",
     imageUrl: "https://vz1c70bqc3.ufs.sh/f/xvyiJUSZFkzW0lX9iHZprYUuChWnfLdlKDAb72za0PZTyt49"

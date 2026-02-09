@@ -72,7 +72,7 @@ export function PricingSection() {
           className="space-y-16 sm:space-y-20"
         >
           <motion.div variants={animationVariants.slideUp} className="text-center max-w-3xl mx-auto">
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-medium leading-tight mb-4 text-[#0E1117]">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-medium leading-tight mb-4 text-[#0E1117]" style={{ fontFamily: 'var(--font-heading)' }}>
               Pricing
             </h2>
           </motion.div>

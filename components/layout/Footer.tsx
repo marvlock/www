@@ -18,7 +18,7 @@ export function Footer() {
               height={20}
               className="w-4 h-4 sm:w-5 sm:h-5"
             />
-            <div className="text-xs sm:text-sm font-medium text-[#0E1117] dark:text-white">Project Marvlock</div>
+            <div className="text-xs sm:text-sm font-medium text-[#0E1117] dark:text-white" style={{ fontFamily: 'var(--font-heading)' }}>Project Marvlock</div>
           </div>
           <div className="flex flex-wrap gap-4 sm:gap-6">
             {SOCIAL_LINKS.map((link) => (

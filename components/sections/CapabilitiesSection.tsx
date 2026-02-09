@@ -15,7 +15,7 @@ export function CapabilitiesSection() {
           className="space-y-8 sm:space-y-12"
         >
           <motion.div variants={animationVariants.slideUp} className="text-center max-w-3xl mx-auto">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 sm:mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 sm:mb-6" style={{ fontFamily: 'var(--font-heading)' }}>
               What We Do
             </h2>
             <div className="w-24 sm:w-32 h-0.5 bg-gradient-to-r from-transparent via-white/30 to-transparent mx-auto"></div>

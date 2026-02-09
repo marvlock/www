@@ -84,7 +84,7 @@ export function WorkSection() {
           className="space-y-12 sm:space-y-16"
         >
           <motion.div variants={animationVariants.slideUp} className="max-w-3xl mx-auto text-center">
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-medium leading-tight text-[#0E1117] dark:text-white mb-4">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-medium leading-tight text-[#0E1117] dark:text-white mb-4" style={{ fontFamily: 'var(--font-heading)' }}>
               Our Projects
             </h2>
             <p className="text-lg sm:text-xl text-[#64748B] dark:text-gray-400">
@@ -131,13 +131,13 @@ export function WorkSection() {
                   </div>
 
                   <div className="p-4 sm:p-6 flex flex-col space-y-3">
-                    <div className="px-3 py-1 bg-gray-100 rounded-full w-fit">
-                      <span className="text-xs font-medium text-[#64748B] uppercase tracking-wider">
+                    <div className="px-3 py-1 bg-gray-100 dark:bg-gray-100 rounded-full w-fit">
+                      <span className="text-xs font-medium text-[#64748B] dark:text-[#64748B] uppercase tracking-wider">
                         {project.stack[0] || "Project"}
                       </span>
                     </div>
 
-                    <h3 className="text-2xl sm:text-3xl font-medium text-[#0E1117] dark:text-white">
+                    <h3 className="text-2xl sm:text-3xl font-medium text-[#0E1117] dark:text-white" style={{ fontFamily: 'var(--font-heading)' }}>
                       {project.name}
                     </h3>
 
@@ -199,12 +199,12 @@ export function WorkSection() {
                     )}
                   </div>
                   <div className="p-4 sm:p-6 flex flex-col space-y-3">
-                    <div className="px-3 py-1 bg-gray-100 dark:bg-gray-800 rounded-full w-fit">
-                      <span className="text-xs font-medium text-[#64748B] dark:text-gray-400 uppercase tracking-wider">
+                    <div className="px-3 py-1 bg-gray-100 dark:bg-gray-100 rounded-full w-fit">
+                      <span className="text-xs font-medium text-[#64748B] dark:text-[#64748B] uppercase tracking-wider">
                         {project.stack[0] || "Project"}
                       </span>
                     </div>
-                    <h3 className="text-2xl sm:text-3xl font-medium text-[#0E1117] dark:text-white">
+                    <h3 className="text-2xl sm:text-3xl font-medium text-[#0E1117] dark:text-white" style={{ fontFamily: 'var(--font-heading)' }}>
                       {project.name}
                     </h3>
                     <p className="text-sm text-[#64748B] dark:text-gray-400 leading-relaxed line-clamp-2">
@@ -263,12 +263,12 @@ export function WorkSection() {
                     )}
                   </div>
                   <div className="p-4 sm:p-6 flex flex-col space-y-3">
-                    <div className="px-3 py-1 bg-gray-100 dark:bg-gray-800 rounded-full w-fit">
-                      <span className="text-xs font-medium text-[#64748B] dark:text-gray-400 uppercase tracking-wider">
+                    <div className="px-3 py-1 bg-gray-100 rounded-full w-fit">
+                      <span className="text-xs font-medium text-[#64748B] uppercase tracking-wider">
                         {project.stack[0] || "Project"}
                       </span>
                     </div>
-                    <h3 className="text-2xl sm:text-3xl font-medium text-[#0E1117] dark:text-white">
+                    <h3 className="text-2xl sm:text-3xl font-medium text-[#0E1117] dark:text-white" style={{ fontFamily: 'var(--font-heading)' }}>
                       {project.name}
                     </h3>
                     <p className="text-sm text-[#64748B] dark:text-gray-400 leading-relaxed line-clamp-2">

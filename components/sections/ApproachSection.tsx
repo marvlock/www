@@ -16,24 +16,24 @@ export function ApproachSection() {
           className="space-y-12 sm:space-y-16"
         >
           <motion.div variants={animationVariants.slideUp} className="text-center max-w-3xl mx-auto">
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-medium leading-tight mb-4">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-medium leading-tight mb-4" style={{ fontFamily: 'var(--font-heading)' }}>
               <span className="text-[#0E1117] dark:text-white">Everything you need.</span>
               <br />
               <span className="text-[#64748B] dark:text-gray-400">Nothing you don't.</span>
             </h2>
             <p className="text-lg sm:text-xl text-[#64748B] dark:text-gray-400">
-              We stripped away the agency bloat. No account managers, no jargon. Just direct access to senior engineers and world-class designers.
+              We stripped away the agency bloat. No account managers, no jargon. Just direct access to cracked engineers and world-class designers.
             </p>
           </motion.div>
 
           <div className="grid md:grid-cols-3 gap-6 sm:gap-8">
             <motion.div
               variants={animationVariants.slideUp}
-              className="bg-white dark:bg-gray-900/50 dark:backdrop-blur-sm rounded-2xl border border-[#E2E8F0] dark:border-gray-800/50 p-6 sm:p-8 space-y-6 relative cursor-pointer"
+              className="bg-white dark:bg-gray-900/50 dark:backdrop-blur-sm rounded-2xl border border-[#E2E8F0] dark:border-gray-800/50 p-6 sm:p-8 space-y-6 relative cursor-pointer flex flex-col"
               whileHover={{ y: -12, scale: 1.03 }}
               transition={{ type: "spring", stiffness: 400, damping: 25 }}
             >
-              <div className="bg-white dark:bg-gray-800/60 dark:backdrop-blur-sm rounded-lg border border-[#E2E8F0] dark:border-gray-700/50 p-4 shadow-sm relative">
+              <div className="bg-white dark:bg-gray-800/60 dark:backdrop-blur-sm rounded-lg border border-[#E2E8F0] dark:border-gray-700/50 p-4 shadow-sm h-48">
                 <div className="flex items-center gap-1 mb-3">
                   <div className="w-2 h-2 rounded-full bg-red-500"></div>
                   <div className="w-2 h-2 rounded-full bg-yellow-500"></div>
@@ -59,28 +59,30 @@ export function ApproachSection() {
                   </div>
                 </div>
               </div>
-              <div className="flex justify-center pt-2">
+              <div className="flex justify-center">
                 <div className="w-12 h-12 rounded-xl bg-indigo-100 dark:bg-indigo-900/50 flex items-center justify-center">
                   <Palette className="w-6 h-6 text-indigo-600 dark:text-indigo-400" />
                 </div>
               </div>
-              <div className="text-center">
-                <h3 className="text-xl sm:text-2xl font-medium text-[#0E1117] dark:text-white mb-3">
-                  World-Class Design
-                </h3>
-                <p className="text-base text-[#64748B] dark:text-gray-400 leading-relaxed">
-                  Aesthetic isn't just decoration. We create emotionally resonant visual systems that build trust instantly.
-                </p>
+              <div className="text-center flex-grow flex flex-col justify-between">
+                <div>
+                  <h3 className="text-xl sm:text-2xl font-medium text-[#0E1117] dark:text-white mb-3" style={{ fontFamily: 'var(--font-heading)' }}>
+                    World-Class Design
+                  </h3>
+                  <p className="text-base text-[#64748B] dark:text-gray-400 leading-relaxed">
+                    Aesthetic isn't just decoration. We create emotionally resonant visual systems that build trust instantly.
+                  </p>
+                </div>
               </div>
             </motion.div>
 
             <motion.div
               variants={animationVariants.slideUp}
-              className="bg-white dark:bg-gray-900/50 dark:backdrop-blur-sm rounded-2xl border border-[#E2E8F0] dark:border-gray-800/50 p-6 sm:p-8 space-y-6 relative cursor-pointer"
+              className="bg-white dark:bg-gray-900/50 dark:backdrop-blur-sm rounded-2xl border border-[#E2E8F0] dark:border-gray-800/50 p-6 sm:p-8 space-y-6 relative cursor-pointer flex flex-col"
               whileHover={{ y: -12, scale: 1.03 }}
               transition={{ type: "spring", stiffness: 400, damping: 25 }}
             >
-              <div className="bg-[#1E1E1E] dark:bg-gray-800/60 dark:backdrop-blur-sm rounded-lg border border-[#2D2D2D] dark:border-gray-700/50 p-4 shadow-sm">
+              <div className="bg-[#1E1E1E] dark:bg-gray-800/60 dark:backdrop-blur-sm rounded-lg border border-[#2D2D2D] dark:border-gray-700/50 p-4 shadow-sm h-48">
                 <div className="flex items-center gap-1 mb-3">
                   <div className="w-2 h-2 rounded-full bg-red-500"></div>
                   <div className="w-2 h-2 rounded-full bg-yellow-500"></div>
@@ -96,28 +98,30 @@ export function ApproachSection() {
                   <div className="text-white">{'}'}</div>
                 </div>
               </div>
-              <div className="flex justify-center pt-2">
+              <div className="flex justify-center">
                 <div className="w-12 h-12 rounded-xl bg-gray-100 dark:bg-gray-800 flex items-center justify-center">
                   <Code className="w-6 h-6 text-[#0E1117] dark:text-white" />
                 </div>
               </div>
-              <div className="text-center">
-                <h3 className="text-xl sm:text-2xl font-medium text-[#0E1117] dark:text-white mb-3">
-                  Modern Engineering
-                </h3>
-                <p className="text-base text-[#64748B] dark:text-gray-400 leading-relaxed">
-                  Built on Modern Tech Stacks. Clean, accessible, and type-safe code that scales with your business.
-                </p>
+              <div className="text-center flex-grow flex flex-col justify-between">
+                <div>
+                  <h3 className="text-xl sm:text-2xl font-medium text-[#0E1117] dark:text-white mb-3" style={{ fontFamily: 'var(--font-heading)' }}>
+                    Modern Engineering
+                  </h3>
+                  <p className="text-base text-[#64748B] dark:text-gray-400 leading-relaxed">
+                    Built on Modern Tech Stacks. Clean, accessible, and type-safe code that scales with your business.
+                  </p>
+                </div>
               </div>
             </motion.div>
 
             <motion.div
               variants={animationVariants.slideUp}
-              className="bg-white dark:bg-gray-900/50 dark:backdrop-blur-sm rounded-2xl border border-[#E2E8F0] dark:border-gray-800/50 p-6 sm:p-8 space-y-6 relative cursor-pointer"
+              className="bg-white dark:bg-gray-900/50 dark:backdrop-blur-sm rounded-2xl border border-[#E2E8F0] dark:border-gray-800/50 p-6 sm:p-8 space-y-6 relative cursor-pointer flex flex-col"
               whileHover={{ y: -12, scale: 1.03 }}
               transition={{ type: "spring", stiffness: 400, damping: 25 }}
             >
-              <div className="bg-white dark:bg-gray-800/60 dark:backdrop-blur-sm rounded-lg border border-[#E2E8F0] dark:border-gray-700/50 p-4 shadow-sm">
+              <div className="bg-white dark:bg-gray-800/60 dark:backdrop-blur-sm rounded-lg border border-[#E2E8F0] dark:border-gray-700/50 p-4 shadow-sm h-48">
                 <div className="flex items-center justify-between mb-3">
                   <div>
                     <div className="text-xs text-[#64748B] dark:text-gray-400 mb-1">MRR</div>
@@ -135,18 +139,20 @@ export function ApproachSection() {
                   <div className="flex-1 bg-[#0E1117] dark:bg-gray-600 rounded-t" style={{ height: '100%' }}></div>
                 </div>
               </div>
-              <div className="flex justify-center pt-2">
+              <div className="flex justify-center">
                 <div className="w-12 h-12 rounded-xl bg-green-100 dark:bg-green-900/50 flex items-center justify-center">
                   <TrendingUp className="w-6 h-6 text-green-600 dark:text-green-400" />
                 </div>
               </div>
-              <div className="text-center">
-                <h3 className="text-xl sm:text-2xl font-medium text-[#0E1117] dark:text-white mb-3">
-                  Growth & Data
-                </h3>
-                <p className="text-base text-[#64748B] dark:text-gray-400 leading-relaxed">
-                  We implement advanced tracking and SEO foundations to ensure your product actually converts.
-                </p>
+              <div className="text-center flex-grow flex flex-col justify-between">
+                <div>
+                  <h3 className="text-xl sm:text-2xl font-medium text-[#0E1117] dark:text-white mb-3" style={{ fontFamily: 'var(--font-heading)' }}>
+                    Growth & Data
+                  </h3>
+                  <p className="text-base text-[#64748B] dark:text-gray-400 leading-relaxed">
+                    We implement advanced tracking and SEO foundations to ensure your product actually converts.
+                  </p>
+                </div>
               </div>
             </motion.div>
           </div>

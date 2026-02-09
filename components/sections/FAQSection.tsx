@@ -39,7 +39,7 @@ export function FAQSection() {
           className="space-y-16 sm:space-y-20"
         >
           <motion.div variants={animationVariants.slideUp} className="text-center max-w-3xl mx-auto">
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-medium leading-tight mb-4 text-[#0E1117] dark:text-white">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-medium leading-tight mb-4 text-[#0E1117] dark:text-white" style={{ fontFamily: 'var(--font-heading)' }}>
               Got Questions? We've<br />
               Got Answers
             </h2>
