@@ -2,11 +2,18 @@
 
 import { motion } from "framer-motion"
 import { animationVariants, viewportOptions } from "@/lib/animations"
-import { Quote, Star } from "lucide-react"
+import { Star } from "lucide-react"
 import { useEffect, useRef } from "react"
 
 export function TestimonialsSection() {
   const scrollContainerRef = useRef<HTMLDivElement>(null)
+
+  const getInitials = (name: string) => {
+    const parts = name.split(" ").filter(Boolean)
+    const first = parts[0]?.[0] ?? ""
+    const last = parts[parts.length - 1]?.[0] ?? ""
+    return `${first}${last}`.toUpperCase()
+  }
 
   const testimonials = [
     {
@@ -127,7 +134,7 @@ export function TestimonialsSection() {
         >
           <motion.div variants={animationVariants.slideUp} className="text-center max-w-3xl mx-auto">
             <h2 className="text-4xl sm:text-5xl md:text-6xl font-medium leading-tight mb-4 text-[#0E1117] dark:text-white" style={{ fontFamily: 'var(--font-heading)' }}>
-              Don't Take Our Word. Take Their's.
+              Don't Take Our Word. Take Theirs.
             </h2>
           </motion.div>
 
@@ -148,11 +155,9 @@ export function TestimonialsSection() {
                     className="p-8 rounded-2xl border border-[#E2E8F0] dark:border-gray-800/50 bg-white dark:bg-gray-900/50 dark:backdrop-blur-sm hover:shadow-xl transition-all flex-shrink-0 testimonial-card w-[320px] sm:w-[380px]"
                   >
                     <div className="flex items-start gap-3 mb-6">
-                      <img 
-                        src={testimonial.avatar} 
-                        alt={testimonial.author}
-                        className="w-14 h-14 rounded-full object-cover flex-shrink-0"
-                      />
+                      <div className="w-14 h-14 rounded-full flex items-center justify-center flex-shrink-0 bg-indigo-500/15 text-indigo-600 dark:bg-indigo-400/15 dark:text-indigo-300 font-semibold">
+                        {getInitials(testimonial.author)}
+                      </div>
                       <div>
                         <p className="font-semibold text-[#0E1117] dark:text-white text-lg mb-1">{testimonial.author}</p>
                         <p className="text-sm text-[#64748B] dark:text-gray-400">{testimonial.role}</p>
@@ -177,11 +182,9 @@ export function TestimonialsSection() {
                     className="p-8 rounded-2xl border border-[#E2E8F0] dark:border-gray-800/50 bg-white dark:bg-gray-900/50 dark:backdrop-blur-sm hover:shadow-xl transition-all flex-shrink-0 testimonial-card w-[320px] sm:w-[380px]"
                   >
                     <div className="flex items-start gap-3 mb-6">
-                      <img 
-                        src={testimonial.avatar} 
-                        alt={testimonial.author}
-                        className="w-14 h-14 rounded-full object-cover flex-shrink-0"
-                      />
+                      <div className="w-14 h-14 rounded-full flex items-center justify-center flex-shrink-0 bg-indigo-500/15 text-indigo-600 dark:bg-indigo-400/15 dark:text-indigo-300 font-semibold">
+                        {getInitials(testimonial.author)}
+                      </div>
                       <div>
                         <p className="font-semibold text-[#0E1117] dark:text-white text-lg mb-1">{testimonial.author}</p>
                         <p className="text-sm text-[#64748B] dark:text-gray-400">{testimonial.role}</p>
@@ -206,11 +209,9 @@ export function TestimonialsSection() {
                     className="p-8 rounded-2xl border border-[#E2E8F0] dark:border-gray-800/50 bg-white dark:bg-gray-900/50 dark:backdrop-blur-sm hover:shadow-xl transition-all flex-shrink-0 testimonial-card w-[320px] sm:w-[380px]"
                   >
                     <div className="flex items-start gap-3 mb-6">
-                      <img 
-                        src={testimonial.avatar} 
-                        alt={testimonial.author}
-                        className="w-14 h-14 rounded-full object-cover flex-shrink-0"
-                      />
+                      <div className="w-14 h-14 rounded-full flex items-center justify-center flex-shrink-0 bg-indigo-500/15 text-indigo-600 dark:bg-indigo-400/15 dark:text-indigo-300 font-semibold">
+                        {getInitials(testimonial.author)}
+                      </div>
                       <div>
                         <p className="font-semibold text-[#0E1117] dark:text-white text-lg mb-1">{testimonial.author}</p>
                         <p className="text-sm text-[#64748B] dark:text-gray-400">{testimonial.role}</p>
