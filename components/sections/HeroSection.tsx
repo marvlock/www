@@ -25,13 +25,13 @@ export function HeroSection() {
         <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-purple-500/10 dark:bg-purple-500/5 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="container mx-auto max-w-7xl w-full relative z-10">
-        <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+      <div className="container mx-auto max-w-7xl w-full relative z-10 min-h-[70vh] md:min-h-0">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
           <motion.div
             initial="initial"
             animate="animate"
             variants={animationVariants.staggerContainer}
-            className="text-center md:text-left space-y-8"
+            className="text-center md:text-left space-y-8 relative z-20 md:z-auto flex flex-col justify-center min-h-[70vh] md:min-h-0 py-8 md:py-0"
           >
             <motion.h1
               variants={animationVariants.slideUp}
@@ -61,10 +61,10 @@ export function HeroSection() {
             initial={{ opacity: 0, scale: 0.8, rotate: -5 }}
             animate={{ opacity: 1, scale: 1, rotate: 0 }}
             transition={{ duration: 1, delay: 0.3, type: "spring", stiffness: 100 }}
-            className="hidden md:flex justify-center items-center relative h-[600px]"
+            className="absolute inset-0 z-0 md:relative md:z-auto flex justify-center items-center w-full min-h-0 md:min-h-[500px] md:h-[600px]"
           >
             <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 dark:from-indigo-500/10 dark:to-purple-500/10 rounded-full blur-3xl"></div>
-            <div className="relative z-10 w-full h-full">
+            <div className="relative z-10 w-full h-full min-h-[240px] sm:min-h-[320px] md:min-h-[500px]">
               <DepthImage3D />
             </div>
           </motion.div>
