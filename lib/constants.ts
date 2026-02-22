@@ -1,5 +1,6 @@
-import { Github, Linkedin, Mail } from "lucide-react"
+import { Github, Linkedin, Mail, Instagram } from "lucide-react"
 import { XIcon } from "@/components/icons/XIcon"
+import { DiscordIcon } from "@/components/icons/DiscordIcon"
 
 export const NAVIGATION_ITEMS = ["Services", "Work", "Testimonials", "Pricing", "FAQ", "Contact"] as const
 
@@ -10,14 +11,24 @@ export const SOCIAL_LINKS = [
     icon: Github 
   },
   { 
+    name: "X", 
+    href: "https://x.com/ProjectMarvlock", 
+    icon: XIcon
+  },
+  { 
     name: "LinkedIn", 
     href: "https://www.linkedin.com/company/project-marvlock/about/?viewAsMember=true", 
     icon: Linkedin 
   },
   { 
-    name: "X", 
-    href: "https://x.com/ProjectMarvlock", 
-    icon: XIcon
+    name: "Instagram", 
+    href: "https://www.instagram.com/marvlock.dev?igsh=endidTR3dmhsZWdr&utm_source=qr", 
+    icon: Instagram 
+  },
+  { 
+    name: "Discord", 
+    href: "https://discord.gg/xvj7V22ay2", 
+    icon: DiscordIcon 
   },
   { 
     name: "Contact", 
