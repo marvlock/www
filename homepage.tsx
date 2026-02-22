@@ -6,7 +6,7 @@ import { HeroSection } from "@/components/sections/HeroSection"
 import { ApproachSection } from "@/components/sections/ApproachSection"
 import { ServicesSection } from "@/components/sections/ServicesSection"
 import { WorkSection } from "@/components/sections/WorkSection"
-import { TestimonialsSection } from "@/components/sections/TestimonialsSection"
+// import { TestimonialsSection } from "@/components/sections/TestimonialsSection"
 import { FAQSection } from "@/components/sections/FAQSection"
 import { ContactSection } from "@/components/sections/ContactSection"
 import { ChatButton } from "@/components/ui/chat-button"
@@ -53,7 +53,7 @@ export default function Component() {
       <ApproachSection />
       <ServicesSection />
       <WorkSection />
-      <TestimonialsSection />
+      {/* <TestimonialsSection /> */}
       <FAQSection />
       <ContactSection />
       <ChatButton />

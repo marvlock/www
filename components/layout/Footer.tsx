@@ -13,12 +13,12 @@ export function Footer() {
           <div className="flex items-center gap-2 sm:gap-3">
             <Image 
               src="/marvlock-logo.png" 
-              alt="Project Marvlock Logo" 
+              alt="Marvlock Logo" 
               width={20} 
               height={20}
               className="w-4 h-4 sm:w-5 sm:h-5"
             />
-            <div className="text-xs sm:text-sm font-medium text-[#0E1117] dark:text-white" style={{ fontFamily: 'var(--font-heading)' }}>Project Marvlock</div>
+            <div className="text-xs sm:text-sm font-medium text-[#0E1117] dark:text-white" style={{ fontFamily: 'var(--font-heading)' }}>Marvlock</div>
           </div>
           <div className="flex flex-wrap gap-4 sm:gap-6">
             {SOCIAL_LINKS.map((link) => (
@@ -44,7 +44,7 @@ export function Footer() {
           </div>
         </div>
         <div className="pt-6 sm:pt-8 mt-6 sm:mt-8 border-t border-[#E2E8F0] dark:border-gray-800 text-center text-xs sm:text-sm text-[#64748B] dark:text-gray-400">
-          © 2026 Project Marvlock. All rights reserved.
+          © 2026 Marvlock. All rights reserved.
         </div>
       </div>
     </footer>

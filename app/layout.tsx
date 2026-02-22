@@ -28,7 +28,7 @@ const alexBrush = Alex_Brush({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://marvlock.dev'),
-  title: 'Project Marvlock — Design and Build Digital Products',
+  title: 'Marvlock — Design and Build Digital Products',
   description: 'We design and build digital products that define the future. From startups to enterprises — we craft intuitive, high-performance websites, apps, and dashboards.',
   icons: {
     icon: '/marvlock-logo.png',
@@ -36,20 +36,20 @@ export const metadata: Metadata = {
     apple: '/marvlock-logo.png',
   },
   openGraph: {
-    title: 'Project Marvlock — Design and Build Digital Products',
+    title: 'Marvlock — Design and Build Digital Products',
     description: 'We design and build digital products that define the future. From startups to enterprises — we craft intuitive, high-performance websites, apps, and dashboards.',
     images: [
       {
         url: '/marvlock-logo.png',
         width: 1200,
         height: 630,
-        alt: 'Project Marvlock Logo',
+        alt: 'Marvlock Logo',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Project Marvlock — Design and Build Digital Products',
+    title: 'Marvlock — Design and Build Digital Products',
     description: 'We design and build digital products that define the future.',
     images: ['/marvlock-logo.png'],
   },

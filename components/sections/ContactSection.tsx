@@ -26,7 +26,7 @@ export function ContactSection() {
               className="text-lg sm:text-xl text-[#64748B] dark:text-gray-400 max-w-2xl mx-auto"
               style={{ fontFamily: 'var(--font-body)' }}
             >
-              Join the high-performing teams building the future with Project Marvlock.
+              Join the high-performing teams building the future with Marvlock.
             </p>
           </motion.div>
 

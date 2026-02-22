@@ -36,12 +36,12 @@ export function Navigation({ isVisible }: NavigationProps) {
           >
             <Image 
               src="/marvlock-logo.png" 
-              alt="Project Marvlock Logo" 
+              alt="Marvlock Logo" 
               width={20} 
               height={20}
               className="w-5 h-5 flex-shrink-0"
             />
-            <span className="text-sm font-medium whitespace-nowrap text-[#0E1117] dark:text-white" style={{ fontFamily: 'var(--font-heading)' }}>Project Marvlock</span>
+            <span className="text-sm font-medium whitespace-nowrap text-[#0E1117] dark:text-white" style={{ fontFamily: 'var(--font-heading)' }}>Marvlock</span>
           </motion.a>
           
           <div className="hidden md:flex items-center gap-3 flex-shrink-0">

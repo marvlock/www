@@ -53,7 +53,7 @@ export function LoadingScreen({ onLoadingComplete }: LoadingScreenProps) {
             className="text-2xl font-bold text-white tracking-wider"
             style={{fontFamily: 'Orbitron, monospace', fontWeight: '600'}}
           >
-            PROJECT MARVLOCK
+            MARVLOCK
           </h1>
         </div>
 
