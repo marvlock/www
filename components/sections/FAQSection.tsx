@@ -29,38 +29,44 @@ export function FAQSection() {
   ]
 
   return (
-    <section id="faq" className="py-12 sm:py-16 px-4 sm:px-6 relative z-10">
+    <section id="faq" className="py-16 sm:py-24 px-4 sm:px-6 relative z-10 bg-white dark:bg-[#121212] border-b-8 border-black dark:border-white">
       <div className="container mx-auto max-w-4xl w-full">
         <motion.div
           initial="initial"
           whileInView="animate"
           viewport={viewportOptions}
           variants={animationVariants.staggerContainer}
-          className="space-y-16 sm:space-y-20"
+          className="space-y-12 sm:space-y-16"
         >
-          <motion.div variants={animationVariants.slideUp} className="text-center max-w-3xl mx-auto">
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-medium leading-tight mb-4 text-[#0E1117] dark:text-white" style={{ fontFamily: 'var(--font-heading)' }}>
-              Got Questions? We've<br />
-              Got Answers
+          <motion.div variants={animationVariants.slideUp} className="text-center md:text-left">
+            <h2 className="text-4xl sm:text-5xl md:text-7xl font-black uppercase tracking-tighter leading-none mb-6 text-black dark:text-white">
+              Questions <span className="text-[#E32726]">Answered.</span>
             </h2>
-            <p className="text-lg sm:text-xl text-[#64748B] dark:text-gray-400">
-              Simple explanations for your most important questions
-            </p>
+            <div className="bg-[#FFD700] p-4 border-4 border-black shadow-[4px_4px_0px_#000000] inline-block">
+              <p className="text-lg sm:text-xl font-bold text-black uppercase tracking-wide">
+                Clear explanations for exactly what you need to know.
+              </p>
+            </div>
           </motion.div>
 
           <motion.div variants={animationVariants.slideUp}>
-            <Accordion type="single" collapsible className="w-full space-y-4">
+            <Accordion type="single" collapsible className="w-full space-y-6">
               {faqs.map((faq, index) => (
                 <AccordionItem
                   key={index}
                   value={`item-${index}`}
-                  className="border border-[#E2E8F0] dark:border-gray-800/50 rounded-xl px-6 py-2 hover:border-[#0E1117] dark:hover:border-gray-600 transition-colors bg-white dark:bg-gray-900/50 dark:backdrop-blur-sm"
+                  className="border-4 border-black dark:border-white bg-[#ecece6] dark:bg-zinc-900 shadow-[8px_8px_0px_#000000] dark:shadow-[8px_8px_0px_#ffffff] hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[12px_12px_0px_#0055A4] transition-all rounded-none px-4 sm:px-6"
                 >
-                  <AccordionTrigger className="text-left text-lg font-semibold text-[#0E1117] dark:text-white hover:no-underline">
-                    {faq.question}
+                  <AccordionTrigger className="text-left text-xl sm:text-2xl font-black uppercase text-black dark:text-white py-6 hover:no-underline hover:text-[#E32726] transition-colors group">
+                    <span className="flex items-start gap-4">
+                      <span className="text-[#0055A4] font-black">{index + 1}.</span>
+                      {faq.question}
+                    </span>
                   </AccordionTrigger>
-                  <AccordionContent className="text-base text-[#64748B] dark:text-gray-400 leading-relaxed">
-                    {faq.answer}
+                  <AccordionContent className="text-base sm:text-lg font-medium text-black dark:text-gray-300 leading-relaxed pb-6 pt-2 border-t-4 border-black dark:border-white">
+                    <div className="pt-4 pl-10 sm:pl-12">
+                      {faq.answer}
+                    </div>
                   </AccordionContent>
                 </AccordionItem>
               ))}

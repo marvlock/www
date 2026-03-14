@@ -69,8 +69,15 @@ export const PROJECTS = [
     githubUrl: "https://github.com/marvlock/ghostform",
     liveUrl: "https://ghostform.marvlock.dev",
     imageUrl: "https://vz1c70bqc3.ufs.sh/f/xvyiJUSZFkzW0lX9iHZprYUuChWnfLdlKDAb72za0PZTyt49"
+  },
+  {
+    name: "Replied",
+    description: "The anonymous sanctuary for professional curation.",
+    stack: ["Full-Stack", "Next.js", "Go", "Supabase", "Drizzle"],
+    githubUrl: "https://github.com/marvellousz/replied",
+    liveUrl: "https://replied.marvlock.dev",
+    imageUrl: "https://vz1c70bqc3.ufs.sh/f/xvyiJUSZFkzWCx5jFunzkXWrVGBjxTYQ6dH250tnEv8NwDIg"
   }
 ] as const
-
 export const CONTACT_EMAIL = "marvlock.dev@gmail.com"
 

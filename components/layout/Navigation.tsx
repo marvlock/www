@@ -1,117 +1,53 @@
 "use client"
 
+import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import Image from "next/image"
+import Link from "next/link"
 import { Menu, X } from "lucide-react"
-import { useState } from "react"
-import { NAVIGATION_ITEMS } from "@/lib/constants"
-import { springTransition } from "@/lib/animations"
 import { ThemeToggle } from "@/components/ui/theme-toggle"
+import { MenuOverlay } from "./MenuOverlay"
 
 interface NavigationProps {
   isVisible: boolean
 }
 
 export function Navigation({ isVisible }: NavigationProps) {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
 
+  // Wait until mounted if needed, but not strictly necessary here unless accessing browser stuff
   return (
     <>
-      <motion.nav
-        initial={{ y: 0, opacity: 1 }}
-        animate={{ 
-          y: 0,
-          opacity: 1
-        }}
-        transition={{ duration: 0.3, ease: "easeInOut" }}
-        className="fixed top-4 sm:top-6 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-2rem)] sm:max-w-2xl"
-      >
-        <div className="bg-gray-100/95 dark:bg-gray-900/95 backdrop-blur-sm rounded-full px-5 py-2.5 flex items-center justify-between gap-6 shadow-sm min-w-0">
-          <motion.a
-            href="#hero"
-            className="flex items-center gap-2 flex-shrink-0 min-w-0"
-            whileHover={{ scale: 1.02 }}
-            transition={springTransition}
-            style={{ fontFamily: 'var(--font-body)' }}
-          >
-            <Image 
-              src="/marvlock-logo.png" 
-              alt="Marvlock Logo" 
-              width={20} 
-              height={20}
-              className="w-5 h-5 flex-shrink-0"
-            />
-            <span className="text-sm font-medium whitespace-nowrap text-[#0E1117] dark:text-white" style={{ fontFamily: 'var(--font-heading)' }}>Marvlock</span>
-          </motion.a>
+      <nav className="fixed top-0 w-full z-50 bg-[#ecece6] dark:bg-zinc-900 border-b-4 border-black dark:border-white px-4 md:px-8 py-3 md:py-4">
+        <div className="max-w-7xl mx-auto flex justify-between items-center">
+          <Link href="/" className="flex items-center gap-2 group">
+            <div className="w-10 h-10 bg-[#FFD700] border-4 border-black dark:border-white flex items-center justify-center rotate-[-3deg] group-hover:rotate-0 transition-transform shadow-[4px_4px_0px_#000000] dark:shadow-[4px_4px_0px_#ffffff]">
+              <Image 
+                src="/marvlock-logo.png" 
+                alt="Marvlock Logo" 
+                width={20} 
+                height={20}
+                className="w-5 h-5"
+              />
+            </div>
+            <span className="font-black text-2xl uppercase tracking-tighter text-black dark:text-white">Marvlock</span>
+          </Link>
           
-          <div className="hidden md:flex items-center gap-3 flex-shrink-0">
-            <motion.a
-              href="#work"
-              className="px-4 py-2 text-sm font-medium text-white bg-[#0E1117] dark:bg-white dark:text-[#0E1117] hover:bg-[#0E1117]/90 dark:hover:bg-white/90 transition-all cursor-pointer rounded-2xl shadow-sm whitespace-nowrap"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              transition={springTransition}
-              style={{ fontFamily: 'var(--font-body)' }}
-            >
-              Work
-            </motion.a>
+          <div className="flex items-center gap-4">
             <ThemeToggle />
-          </div>
 
-          <div className="md:hidden flex items-center gap-2">
-            <ThemeToggle />
-            <button
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="p-1.5 text-[#0E1117] dark:text-white hover:text-[#0E1117]/70 dark:hover:text-white/70 transition-colors flex-shrink-0"
-              aria-label="Toggle menu"
+            <button 
+              onClick={() => setIsMenuOpen(true)}
+              className="py-2 px-4 md:px-6 border-4 border-black dark:border-white bg-[#0055A4] text-white font-bold text-xs flex items-center gap-2 group shadow-[4px_4px_0px_#000000] dark:shadow-[4px_4px_0px_#ffffff] hover:translate-y-[2px] hover:translate-x-[2px] hover:shadow-[2px_2px_0px_#000000] dark:hover:shadow-[2px_2px_0px_#ffffff] transition-all"
             >
-              {isMobileMenuOpen ? (
-                <X className="w-5 h-5" />
-              ) : (
-                <Menu className="w-5 h-5" />
-              )}
+              <Menu className="w-5 h-5 transition-transform group-hover:rotate-90" strokeWidth={3} />
+              <span className="mt-0.5 tracking-widest hidden sm:inline">MENU</span>
             </button>
           </div>
         </div>
-      </motion.nav>
+      </nav>
 
-      <AnimatePresence>
-        {isMobileMenuOpen && (
-          <>
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.2 }}
-              className="fixed inset-0 bg-black/20 backdrop-blur-sm z-40 md:hidden"
-              onClick={() => setIsMobileMenuOpen(false)}
-            />
-            <motion.div
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              transition={{ duration: 0.2 }}
-              className="fixed top-20 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-2rem)] md:hidden"
-            >
-              <div className="bg-gray-100/95 dark:bg-gray-900/95 backdrop-blur-sm rounded-2xl p-4 shadow-lg">
-                <div className="flex flex-col gap-1">
-                  {NAVIGATION_ITEMS.map((item) => (
-                    <motion.a
-                      key={item}
-                      href={`#${item.toLowerCase()}`}
-                      onClick={() => setIsMobileMenuOpen(false)}
-                      className="px-4 py-3 text-sm text-[#64748B] dark:text-gray-300 hover:text-[#0E1117] dark:hover:text-white hover:bg-[#F8FAFC] dark:hover:bg-gray-800 transition-colors cursor-pointer rounded-lg text-center"
-                      whileTap={{ scale: 0.98 }}
-                    >
-                      {item}
-                    </motion.a>
-                  ))}
-                </div>
-              </div>
-            </motion.div>
-          </>
-        )}
-      </AnimatePresence>
+      <MenuOverlay isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
     </>
   )
 }

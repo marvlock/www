@@ -6,28 +6,24 @@ import { animationVariants, viewportOptions } from "@/lib/animations"
 
 export function ContactSection() {
   return (
-    <section id="contact" className="py-12 sm:py-16 px-4 sm:px-6 relative z-10">
-      <div className="container mx-auto max-w-4xl w-full relative z-10">
+    <section id="contact" className="py-24 sm:py-36 px-4 sm:px-6 relative z-10 bg-[#FFD700] border-b-8 border-black">
+      <div className="container mx-auto max-w-5xl w-full relative z-10">
         <motion.div
           initial="initial"
           whileInView="animate"
           viewport={viewportOptions}
           variants={animationVariants.staggerContainer}
-          className="text-center space-y-8 sm:space-y-10"
+          className="text-center space-y-12 sm:space-y-16"
         >
-          <motion.div variants={animationVariants.slideUp} className="space-y-4 sm:space-y-6">
-            <h2 
-              className="text-5xl sm:text-6xl md:text-7xl font-bold leading-tight text-[#0E1117] dark:text-white"
-              style={{ fontFamily: 'var(--font-heading)' }}
-            >
-              Ready to scale?
+          <motion.div variants={animationVariants.slideUp}>
+            <h2 className="text-6xl sm:text-7xl md:text-9xl font-black uppercase tracking-tighter leading-none mb-8 text-black">
+              Ready <br/>To Scale<span className="text-[#E32726]">?</span>
             </h2>
-            <p 
-              className="text-lg sm:text-xl text-[#64748B] dark:text-gray-400 max-w-2xl mx-auto"
-              style={{ fontFamily: 'var(--font-body)' }}
-            >
-              Join the high-performing teams building the future with Marvlock.
-            </p>
+            <div className="bg-white p-4 sm:p-6 border-4 border-black inline-block shadow-[8px_8px_0px_#000000] mb-8 sm:mb-12">
+              <p className="text-xl sm:text-2xl md:text-3xl font-black text-black uppercase tracking-wide">
+                Join the high-performing teams building the future with Marvlock.
+              </p>
+            </div>
           </motion.div>
 
           <motion.div
@@ -36,10 +32,7 @@ export function ContactSection() {
           >
             <motion.a
               href={`mailto:${CONTACT_EMAIL}?subject=New Project Inquiry`}
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              className="px-8 py-3 bg-[#0E1117] dark:bg-white dark:text-[#0E1117] text-white rounded-full font-medium text-base sm:text-lg shadow-lg hover:bg-[#0E1117]/90 dark:hover:bg-white/90 transition-all cursor-pointer"
-              style={{ fontFamily: 'var(--font-body)' }}
+              className="inline-block px-10 py-5 sm:px-16 sm:py-8 bg-black text-white text-xl sm:text-3xl font-black uppercase tracking-wider border-4 border-black shadow-[12px_12px_0px_#E32726] hover:translate-y-[4px] hover:translate-x-[4px] hover:shadow-[8px_8px_0px_#0055A4] transition-all cursor-pointer"
             >
               Get Started Now
             </motion.a>
@@ -49,4 +42,3 @@ export function ContactSection() {
     </section>
   )
 }
-

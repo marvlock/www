@@ -10,7 +10,7 @@ import { WorkSection } from "@/components/sections/WorkSection"
 import { FAQSection } from "@/components/sections/FAQSection"
 import { ContactSection } from "@/components/sections/ContactSection"
 import { ChatButton } from "@/components/ui/chat-button"
-import LiquidEther from "@/components/ui/liquid-ether"
+
 import { useTheme } from "next-themes"
 import { useEffect, useState } from "react"
 
@@ -24,28 +24,8 @@ export default function Component() {
 
   return (
     <div className="bg-white dark:bg-[#0E1117] text-[#0E1117] dark:text-white relative overflow-x-hidden transition-colors">
-      <div className="fixed inset-0 overflow-hidden pointer-events-none z-0 w-screen h-screen">
-        {mounted && theme === 'dark' && (
-          <div className="absolute inset-0 w-full h-full" style={{ width: '100vw', height: '100vh' }}>
-            <LiquidEther
-              colors={['#5227FF', '#FF9FFC', '#B19EEF']}
-              mouseForce={20}
-              cursorSize={100}
-              isViscous
-              viscous={30}
-              iterationsViscous={32}
-              iterationsPoisson={32}
-              resolution={0.5}
-              isBounce={false}
-              autoDemo
-              autoSpeed={0.5}
-              autoIntensity={2.2}
-              takeoverDuration={0.25}
-              autoResumeDelay={3000}
-              autoRampDuration={0.6}
-            />
-          </div>
-        )}
+      <div className="fixed inset-0 z-0 bg-[#f4f4f0] dark:bg-[#121212]">
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#00000010_1px,transparent_1px),linear-gradient(to_bottom,#00000010_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#ffffff10_1px,transparent_1px),linear-gradient(to_bottom,#ffffff10_1px,transparent_1px)] bg-[size:2rem_2rem]"></div>
       </div>
       <div className="relative z-10">
         <Navigation isVisible={true} />

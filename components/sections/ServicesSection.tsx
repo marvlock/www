@@ -50,7 +50,7 @@ export function ServicesSection() {
       case "brand":
         return (
           <div className="flex flex-col items-center space-y-4">
-            <div className="bg-[#1E1E1E] rounded-lg border border-[#2D2D2D] p-4 shadow-sm w-full overflow-hidden">
+            <div className="bg-[#ecece6] dark:bg-black border-4 border-black dark:border-white p-4 shadow-[4px_4px_0px_#000000] dark:shadow-[4px_4px_0px_#ffffff] w-full overflow-hidden">
               <DotLottieReact
                 src="https://lottie.host/ef32f5c6-fb72-4316-b6cb-2003b8f47e6a/rmnzQkYKkb.lottie"
                 loop
@@ -59,14 +59,14 @@ export function ServicesSection() {
               />
             </div>
             <div className="flex gap-2">
-              <div className="w-8 h-8 bg-gray-200 dark:bg-gray-800 rounded-lg flex items-center justify-center overflow-hidden">
+              <div className="w-10 h-10 bg-[#FFD700] border-2 border-black dark:border-white flex items-center justify-center overflow-hidden shadow-[2px_2px_0px_#000000] dark:shadow-[2px_2px_0px_#ffffff]">
                 <img 
                   src="https://vz1c70bqc3.ufs.sh/f/xvyiJUSZFkzWeZsMVsPp4qSfeuNw5YcsZMALGrJIjO97Cy8H" 
                   alt="AI" 
                   className="w-full h-full object-contain"
                 />
               </div>
-              <div className="w-8 h-8 bg-gray-200 dark:bg-gray-800 rounded-lg flex items-center justify-center overflow-hidden">
+              <div className="w-10 h-10 bg-[#00A4EF] border-2 border-black dark:border-white flex items-center justify-center overflow-hidden shadow-[2px_2px_0px_#000000] dark:shadow-[2px_2px_0px_#ffffff] p-1">
                 <img 
                   src="https://vz1c70bqc3.ufs.sh/f/xvyiJUSZFkzWzmSfUYioaCjdrBhpmGy7Te6F9ZUlckQtuNSI" 
                   alt="Figma" 
@@ -79,7 +79,7 @@ export function ServicesSection() {
       case "website":
         return (
           <div className="flex flex-col items-center space-y-4">
-            <div className="bg-[#1E1E1E] rounded-lg border border-[#2D2D2D] p-4 shadow-sm w-full overflow-hidden">
+            <div className="bg-[#ecece6] dark:bg-black border-4 border-black dark:border-white p-4 shadow-[4px_4px_0px_#000000] dark:shadow-[4px_4px_0px_#ffffff] w-full overflow-hidden">
               <DotLottieReact
                 src="https://lottie.host/4e2f59f1-24df-4dcc-9df2-9950fd6f9bd1/WJhi64AFOQ.lottie"
                 loop
@@ -88,14 +88,14 @@ export function ServicesSection() {
               />
             </div>
             <div className="flex gap-2">
-              <div className="w-8 h-8 bg-gray-200 dark:bg-gray-800 rounded-lg flex items-center justify-center overflow-hidden">
+              <div className="w-10 h-10 bg-[#E32726] border-2 border-black dark:border-white flex items-center justify-center overflow-hidden shadow-[2px_2px_0px_#000000] dark:shadow-[2px_2px_0px_#ffffff] p-1">
                 <img 
                   src="https://vz1c70bqc3.ufs.sh/f/xvyiJUSZFkzWzmSfUYioaCjdrBhpmGy7Te6F9ZUlckQtuNSI" 
                   alt="Figma" 
                   className="w-full h-full object-contain"
                 />
               </div>
-              <div className="w-8 h-8 bg-gray-200 dark:bg-gray-800 rounded-lg flex items-center justify-center overflow-hidden">
+              <div className="w-10 h-10 bg-[#FFD700] border-2 border-black dark:border-white flex items-center justify-center overflow-hidden shadow-[2px_2px_0px_#000000] dark:shadow-[2px_2px_0px_#ffffff] p-1">
                 <img 
                   src="https://vz1c70bqc3.ufs.sh/f/xvyiJUSZFkzWv4VgfA7GBOtCH3IarZi1WRn6om4PwEyVhsgS" 
                   alt="Framer" 
@@ -108,7 +108,7 @@ export function ServicesSection() {
       case "product":
         return (
           <div className="flex flex-col items-center space-y-4">
-            <div className="bg-[#1E1E1E] rounded-lg border border-[#2D2D2D] p-4 shadow-sm w-full overflow-hidden">
+            <div className="bg-[#ecece6] dark:bg-black border-4 border-black dark:border-white p-4 shadow-[4px_4px_0px_#000000] dark:shadow-[4px_4px_0px_#ffffff] w-full overflow-hidden">
               <DotLottieReact
                 src="https://lottie.host/fc75e8ec-9039-4676-9f73-5453cb200479/63I8e8JBYb.lottie"
                 loop
@@ -117,21 +117,21 @@ export function ServicesSection() {
               />
             </div>
             <div className="flex gap-2">
-              <div className="w-8 h-8 bg-gray-200 dark:bg-gray-800 rounded-lg flex items-center justify-center overflow-hidden">
+              <div className="w-10 h-10 bg-[#0055A4] border-2 border-black dark:border-white flex items-center justify-center overflow-hidden shadow-[2px_2px_0px_#000000] dark:shadow-[2px_2px_0px_#ffffff] p-1">
                 <img 
                   src="https://vz1c70bqc3.ufs.sh/f/xvyiJUSZFkzWzmSfUYioaCjdrBhpmGy7Te6F9ZUlckQtuNSI" 
                   alt="Figma" 
                   className="w-full h-full object-contain"
                 />
               </div>
-              <div className="w-8 h-8 bg-gray-200 dark:bg-gray-800 rounded-lg flex items-center justify-center overflow-hidden">
+              <div className="w-10 h-10 bg-white border-2 border-black dark:border-white flex items-center justify-center overflow-hidden shadow-[2px_2px_0px_#000000] dark:shadow-[2px_2px_0px_#ffffff] p-1">
                 <img 
                   src="https://vz1c70bqc3.ufs.sh/f/xvyiJUSZFkzW3pFhhMe21QOI0roAJCzZXBmwha4RS9Ptxueq" 
                   alt="Notion" 
                   className="w-full h-full object-contain"
                 />
               </div>
-              <div className="w-8 h-8 bg-gray-200 dark:bg-gray-800 rounded-lg flex items-center justify-center overflow-hidden">
+              <div className="w-10 h-10 bg-[#FFD700] border-2 border-black dark:border-white flex items-center justify-center overflow-hidden shadow-[2px_2px_0px_#000000] dark:shadow-[2px_2px_0px_#ffffff] p-1">
                 <img 
                   src="https://vz1c70bqc3.ufs.sh/f/xvyiJUSZFkzWo5s9T1NCsSpH2FPtymi6KkbXJgAdw7LM1YDr" 
                   alt="Linear" 
@@ -144,7 +144,7 @@ export function ServicesSection() {
       case "webdev":
         return (
           <div className="flex flex-col items-center space-y-4">
-            <div className="bg-[#1E1E1E] rounded-lg border border-[#2D2D2D] p-4 shadow-sm w-full overflow-hidden">
+            <div className="bg-[#ecece6] dark:bg-black border-4 border-black dark:border-white p-4 shadow-[4px_4px_0px_#000000] dark:shadow-[4px_4px_0px_#ffffff] w-full overflow-hidden">
               <DotLottieReact
                 src="https://lottie.host/457fd8b1-2056-4651-a8b7-56ba08b5d9de/oz1W6AhJTF.lottie"
                 loop
@@ -153,21 +153,21 @@ export function ServicesSection() {
               />
             </div>
             <div className="flex gap-2">
-              <div className="w-8 h-8 bg-gray-200 dark:bg-gray-800 rounded-lg flex items-center justify-center overflow-hidden">
+              <div className="w-10 h-10 bg-black border-2 border-black dark:border-white flex items-center justify-center overflow-hidden shadow-[2px_2px_0px_#E32726] p-1">
                 <img 
                   src="https://vz1c70bqc3.ufs.sh/f/xvyiJUSZFkzWEAtfUPo9A46PCmS5D8fnQkOsi3RKX7VbzcrH" 
                   alt="Coding" 
-                  className="w-full h-full object-contain"
+                  className="w-full h-full object-contain opacity-90"
                 />
               </div>
-              <div className="w-8 h-8 bg-gray-200 dark:bg-gray-800 rounded-lg flex items-center justify-center overflow-hidden">
+              <div className="w-10 h-10 bg-white border-2 border-black dark:border-white flex items-center justify-center overflow-hidden shadow-[2px_2px_0px_#000000] dark:shadow-[2px_2px_0px_#ffffff] p-1">
                 <img 
                   src="https://vz1c70bqc3.ufs.sh/f/xvyiJUSZFkzWv4VgfA7GBOtCH3IarZi1WRn6om4PwEyVhsgS" 
                   alt="Framer" 
                   className="w-full h-full object-contain"
                 />
               </div>
-              <div className="w-8 h-8 bg-gray-200 dark:bg-gray-800 rounded-lg flex items-center justify-center overflow-hidden">
+              <div className="w-10 h-10 bg-[#E32726] border-2 border-black dark:border-white flex items-center justify-center overflow-hidden shadow-[2px_2px_0px_#000000] dark:shadow-[2px_2px_0px_#ffffff] p-1">
                 <img 
                   src="https://vz1c70bqc3.ufs.sh/f/xvyiJUSZFkzW52x8xHE9xs5uJUKrLyqc2advWBVG3kenhflj" 
                   alt="Webflow" 
@@ -180,7 +180,7 @@ export function ServicesSection() {
       case "app":
         return (
           <div className="flex flex-col items-center space-y-4">
-            <div className="bg-[#1E1E1E] rounded-lg border border-[#2D2D2D] p-4 shadow-sm w-full overflow-hidden">
+            <div className="bg-[#ecece6] dark:bg-black border-4 border-black dark:border-white p-4 shadow-[4px_4px_0px_#000000] dark:shadow-[4px_4px_0px_#ffffff] w-full overflow-hidden">
               <DotLottieReact
                 src="https://lottie.host/e257894e-ffd4-4b61-a21f-c9ba2b61ae74/xN6bZuLDMf.lottie"
                 loop
@@ -189,25 +189,26 @@ export function ServicesSection() {
               />
             </div>
             <div className="flex gap-2">
-              <div className="w-8 h-8 bg-gray-200 dark:bg-gray-800 rounded-lg flex items-center justify-center overflow-hidden">
-                <svg className="w-5 h-5 text-[#0E1117] dark:text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect x="7" y="2" width="10" height="20" rx="2" stroke="currentColor" strokeWidth="2" fill="none"/>
-                  <rect x="9" y="5" width="6" height="10" rx="1" fill="currentColor" opacity="0.3"/>
-                  <circle cx="12" cy="17" r="1" fill="currentColor"/>
+              <div className="w-10 h-10 bg-[#FFD700] border-2 border-black dark:border-white flex items-center justify-center overflow-hidden shadow-[2px_2px_0px_#000000] dark:shadow-[2px_2px_0px_#ffffff] p-1">
+                <svg className="w-6 h-6 text-black" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="7" y="2" width="10" height="20" rx="0" stroke="currentColor" strokeWidth="2.5" fill="none"/>
+                  <rect x="10" y="5" width="4" height="2" fill="currentColor" />
+                  <rect x="9" y="8" width="6" height="6" fill="currentColor" />
+                  <rect x="11" y="18" width="2" height="2" fill="currentColor"/>
                 </svg>
               </div>
-              <div className="w-8 h-8 bg-gray-200 dark:bg-gray-800 rounded-lg flex items-center justify-center overflow-hidden">
+              <div className="w-10 h-10 bg-[#0055A4] border-2 border-black dark:border-white flex items-center justify-center overflow-hidden shadow-[2px_2px_0px_#000000] dark:shadow-[2px_2px_0px_#ffffff] p-1">
                 <img 
                   src="https://vz1c70bqc3.ufs.sh/f/xvyiJUSZFkzWv4VgfA7GBOtCH3IarZi1WRn6om4PwEyVhsgS" 
                   alt="Framer" 
                   className="w-full h-full object-contain"
                 />
               </div>
-              <div className="w-8 h-8 bg-gray-200 dark:bg-gray-800 rounded-lg flex items-center justify-center overflow-hidden">
+              <div className="w-10 h-10 bg-black border-2 border-black dark:border-white flex items-center justify-center overflow-hidden shadow-[2px_2px_0px_#000000] dark:shadow-[2px_2px_0px_#ffffff] p-1">
                 <img 
                   src="https://vz1c70bqc3.ufs.sh/f/xvyiJUSZFkzWEAtfUPo9A46PCmS5D8fnQkOsi3RKX7VbzcrH" 
                   alt="Coding" 
-                  className="w-full h-full object-contain"
+                  className="w-full h-full object-contain opacity-90"
                 />
               </div>
             </div>
@@ -216,7 +217,7 @@ export function ServicesSection() {
       case "pitch":
         return (
           <div className="flex flex-col items-center space-y-4">
-            <div className="bg-[#1E1E1E] rounded-lg border border-[#2D2D2D] p-4 shadow-sm w-full overflow-hidden">
+            <div className="bg-[#ecece6] dark:bg-black border-4 border-black dark:border-white p-4 shadow-[4px_4px_0px_#000000] dark:shadow-[4px_4px_0px_#ffffff] w-full overflow-hidden">
               <DotLottieReact
                 src="https://lottie.host/194d1d90-fa30-4a7f-87a8-d42c3a35ea56/C9ncrgqcst.lottie"
                 loop
@@ -225,21 +226,20 @@ export function ServicesSection() {
               />
             </div>
             <div className="flex gap-2">
-              <div className="w-8 h-8 bg-gray-200 dark:bg-gray-800 rounded-lg flex items-center justify-center overflow-hidden">
-                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect x="2" y="2" width="9" height="9" fill="#00A4EF"/>
-                  <rect x="13" y="2" width="9" height="9" fill="#00A4EF"/>
-                  <rect x="2" y="13" width="9" height="9" fill="#00A4EF"/>
-                  <rect x="13" y="13" width="9" height="9" fill="#00A4EF"/>
+              <div className="w-10 h-10 bg-white border-2 border-black dark:border-white flex items-center justify-center overflow-hidden shadow-[2px_2px_0px_#000000] dark:shadow-[2px_2px_0px_#ffffff] p-1">
+                <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="2" y="2" width="9" height="9" fill="#00A4EF" stroke="black" strokeWidth="1" />
+                  <rect x="13" y="2" width="9" height="9" fill="#00A4EF" stroke="black" strokeWidth="1"/>
+                  <rect x="2" y="13" width="9" height="9" fill="#00A4EF" stroke="black" strokeWidth="1"/>
+                  <rect x="13" y="13" width="9" height="9" fill="#00A4EF" stroke="black" strokeWidth="1"/>
                 </svg>
               </div>
-              <div className="w-8 h-8 bg-gray-200 dark:bg-gray-800 rounded-lg flex items-center justify-center overflow-hidden">
-                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect x="3" y="4" width="18" height="14" rx="1" fill="#D83B01"/>
-                  <rect x="5" y="7" width="14" height="2" fill="white" opacity="0.8"/>
-                  <rect x="5" y="11" width="10" height="1.5" fill="white" opacity="0.6"/>
-                  <rect x="5" y="14" width="12" height="1.5" fill="white" opacity="0.6"/>
-                  <rect x="5" y="17" width="8" height="1.5" fill="white" opacity="0.6"/>
+              <div className="w-10 h-10 bg-[#E32726] border-2 border-black dark:border-white flex items-center justify-center overflow-hidden shadow-[2px_2px_0px_#000000] dark:shadow-[2px_2px_0px_#ffffff] p-1">
+                <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="2" y="4" width="20" height="16" fill="none" stroke="black" strokeWidth="2" />
+                  <rect x="4" y="6" width="16" height="4" fill="#FFD700" stroke="black" strokeWidth="1.5" />
+                  <rect x="4" y="12" width="8" height="2" fill="white" stroke="black" strokeWidth="1"/>
+                  <rect x="4" y="16" width="12" height="2" fill="white" stroke="black" strokeWidth="1"/>
                 </svg>
               </div>
             </div>
@@ -251,38 +251,37 @@ export function ServicesSection() {
   }
 
   return (
-    <section id="services" className="py-12 sm:py-16 px-4 sm:px-6 relative z-10">
+    <section id="services" className="py-16 sm:py-24 px-4 sm:px-6 relative z-10 bg-white dark:bg-[#121212] border-b-8 border-black dark:border-white">
       <div className="container mx-auto max-w-7xl w-full">
         <motion.div
           initial="initial"
           whileInView="animate"
           viewport={viewportOptions}
           variants={animationVariants.staggerContainer}
-          className="space-y-16 sm:space-y-20"
+          className="space-y-12 sm:space-y-16"
         >
-          <motion.div variants={animationVariants.slideUp} className="text-center max-w-3xl mx-auto">
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-medium leading-tight mb-4 text-[#0E1117] dark:text-white" style={{ fontFamily: 'var(--font-heading)' }}>
-              Your Vision. Executed to Perfection.
+          <motion.div variants={animationVariants.slideUp} className="text-center md:text-left">
+            <h2 className="text-4xl sm:text-5xl md:text-7xl font-black uppercase tracking-tighter leading-none mb-6 text-black dark:text-white inline-block">
+              Your Vision.<br/>
+              <span className="text-[#0055A4] dark:text-[#E32726]">Executed.</span>
             </h2>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
             {services.map((service, index) => (
               <motion.div
                 key={index}
                 variants={animationVariants.slideUp}
-                className="p-6 sm:p-8 rounded-2xl border border-[#E2E8F0] dark:border-gray-800/50 bg-white dark:bg-gray-900/50 dark:backdrop-blur-sm cursor-pointer"
-                whileHover={{ y: -12, scale: 1.03 }}
-                transition={{ type: "spring", stiffness: 400, damping: 25 }}
+                className="p-6 sm:p-8 bg-white dark:bg-zinc-900 border-4 border-black dark:border-white shadow-[8px_8px_0px_#000000] dark:shadow-[8px_8px_0px_#ffffff] hover:-translate-y-2 hover:-translate-x-2 hover:shadow-[16px_16px_0px_#0055A4] transition-all cursor-pointer flex flex-col group"
               >
-                <div className="flex flex-col items-center space-y-4 mb-6">
+                <div className="flex flex-col items-center space-y-6 mb-8">
                   {renderIllustration(service.illustration)}
                 </div>
-                <div className="text-center">
-                  <h3 className="text-xl sm:text-2xl font-medium text-[#0E1117] dark:text-white mb-3" style={{ fontFamily: 'var(--font-heading)' }}>
+                <div className="text-left mt-auto">
+                  <h3 className="text-2xl font-black uppercase text-black dark:text-white mb-3 group-hover:text-[#E32726] transition-colors">
                     {service.title}
                   </h3>
-                  <p className="text-base text-[#64748B] dark:text-gray-400 leading-relaxed">
+                  <p className="text-base font-medium text-black dark:text-gray-300">
                     {service.description}
                   </p>
                 </div>
