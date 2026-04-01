@@ -1,11 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import Image from "next/image"
 import Link from "next/link"
-import { Menu, X } from "lucide-react"
-import { ThemeToggle } from "@/components/ui/theme-toggle"
 import { MenuOverlay } from "./MenuOverlay"
 
 interface NavigationProps {
@@ -15,34 +11,31 @@ interface NavigationProps {
 export function Navigation({ isVisible }: NavigationProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
-  // Wait until mounted if needed, but not strictly necessary here unless accessing browser stuff
   return (
     <>
-      <nav className="fixed top-0 w-full z-50 bg-[#ecece6] dark:bg-zinc-900 border-b-4 border-black dark:border-white px-4 md:px-8 py-3 md:py-4">
-        <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <Link href="/" className="flex items-center gap-2 group">
-            <div className="w-10 h-10 bg-[#FFD700] border-4 border-black dark:border-white flex items-center justify-center rotate-[-3deg] group-hover:rotate-0 transition-transform shadow-[4px_4px_0px_#000000] dark:shadow-[4px_4px_0px_#ffffff]">
-              <Image 
-                src="/marvlock-logo.png" 
-                alt="Marvlock Logo" 
-                width={20} 
-                height={20}
-                className="w-5 h-5"
-              />
-            </div>
-            <span className="font-black text-2xl uppercase tracking-tighter text-black dark:text-white">Marvlock</span>
+      <nav className="fixed inset-x-0 top-0 z-[100] p-4 md:p-6">
+        <div className="section-shell">
+          <div className="glass-surface pointer-events-auto flex items-center justify-between rounded-2xl px-5 py-3 shadow-[0_18px_44px_rgba(50,42,32,0.12)] md:px-7 md:py-4">
+          <Link 
+            href="/" 
+            className="flex items-center gap-2 group"
+          >
+            <span className="text-lg font-extrabold uppercase tracking-tight transition-colors group-hover:text-accent md:text-xl">
+              Marvlock
+              <span className="ml-0.5 text-accent">*</span>
+            </span>
+            <span className="hidden text-xs uppercase tracking-[0.22em] text-muted-foreground md:inline">Digital Product Studio</span>
           </Link>
           
-          <div className="flex items-center gap-4">
-            <ThemeToggle />
-
+            <div className="flex items-center gap-6">
             <button 
               onClick={() => setIsMenuOpen(true)}
-              className="py-2 px-4 md:px-6 border-4 border-black dark:border-white bg-[#0055A4] text-white font-bold text-xs flex items-center gap-2 group shadow-[4px_4px_0px_#000000] dark:shadow-[4px_4px_0px_#ffffff] hover:translate-y-[2px] hover:translate-x-[2px] hover:shadow-[2px_2px_0px_#000000] dark:hover:shadow-[2px_2px_0px_#ffffff] transition-all"
+                className="group inline-flex items-center gap-2 rounded-full border border-border bg-background/80 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] transition-all hover:border-accent hover:text-accent"
             >
-              <Menu className="w-5 h-5 transition-transform group-hover:rotate-90" strokeWidth={3} />
-              <span className="mt-0.5 tracking-widest hidden sm:inline">MENU</span>
+                <span>Explore</span>
+                <span className="block h-1.5 w-1.5 rounded-full bg-accent transition-transform group-hover:scale-125" />
             </button>
+            </div>
           </div>
         </div>
       </nav>
@@ -51,4 +44,3 @@ export function Navigation({ isVisible }: NavigationProps) {
     </>
   )
 }
-

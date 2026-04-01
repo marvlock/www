@@ -35,72 +35,73 @@ const POST_CONTENT = `
 
 export default function BlogPost() {
   return (
-    <div className="bg-[#ecece6] dark:bg-zinc-900 text-[#0E1117] dark:text-white relative min-h-screen flex flex-col transition-colors">
-      <div className="fixed inset-0 z-0 bg-[#f4f4f0] dark:bg-[#121212]">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#00000010_1px,transparent_1px),linear-gradient(to_bottom,#00000010_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#ffffff10_1px,transparent_1px),linear-gradient(to_bottom,#ffffff10_1px,transparent_1px)] bg-[size:2rem_2rem]"></div>
-      </div>
-      
+    <div className="bg-background text-foreground relative min-h-screen flex flex-col transition-colors">
       <div className="relative z-10 flex flex-col flex-1">
         <Navigation isVisible={true} />
         
-        <main className="flex-1 pt-32 pb-24 px-4 sm:px-6">
+        <main className="flex-1 pt-32 md:pt-48 pb-24 px-6 md:px-10">
           <div className="container mx-auto max-w-4xl w-full">
             <motion.div
-              initial="initial"
-              animate="animate"
-              variants={animationVariants.staggerContainer}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               className="space-y-12 sm:space-y-16"
             >
-              
-              <motion.div variants={animationVariants.slideUp}>
-                <Link href="/blog" className="inline-flex items-center gap-2 text-xl font-black uppercase text-black dark:text-white hover:text-[#0055A4] transition-colors group mb-12">
-                   <ArrowLeft className="w-6 h-6 group-hover:-translate-x-2 transition-transform" strokeWidth={3} />
-                   Back to Thoughts
+              <div>
+                <Link href="/" className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-muted-foreground hover:text-accent transition-colors group mb-12">
+                   <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
+                   Back to Home
                 </Link>
 
-                <div className="border-4 border-black dark:border-white bg-white dark:bg-[#121212] p-8 sm:p-12 md:p-16 shadow-[16px_16px_0px_#000000] dark:shadow-[16px_16px_0px_#ffffff] relative">
-                  <div className="absolute top-0 left-0 w-full h-4 bg-[#0055A4]"></div>
-                  
-                  <div className="flex flex-wrap items-center gap-4 text-sm sm:text-base font-black uppercase tracking-widest text-[#64748B] dark:text-gray-400 mb-8 mt-4">
-                    <span className="bg-[#ecece6] dark:bg-zinc-800 text-black dark:text-white px-3 py-1 border-2 border-black dark:border-white">
-                      Engineering
-                    </span>
+                <div className="space-y-10">
+                  <div className="flex flex-wrap items-center gap-6 text-xs font-bold uppercase tracking-widest text-muted-foreground">
+                    <span className="text-accent">Engineering<span className="ml-1">*</span></span>
                     <span>Sep 04, 2026</span>
+                    <span>10 min read</span>
                   </div>
 
-                  <h1 className="text-4xl sm:text-5xl md:text-7xl font-black uppercase tracking-tighter leading-none mb-12 text-black dark:text-white">
-                    Building Scalable Next.js Architectures
+                  <h1 className="text-4xl md:text-8xl font-bold uppercase tracking-tighter leading-[0.9] text-foreground">
+                    Building Scalable <br />
+                    <span className="font-serif-italic normal-case text-accent">Next.js Architectures</span>
                   </h1>
+
+                  <div className="w-full h-px bg-border" />
 
                   <div 
                     className="
-                      text-lg sm:text-xl text-black dark:text-gray-300 font-medium leading-relaxed
-                      [&>h3]:text-2xl [&>h3]:sm:text-3xl [&>h3]:font-black [&>h3]:uppercase [&>h3]:tracking-tighter [&>h3]:mt-12 [&>h3]:mb-6 [&>h3]:text-black [&>h3]:dark:text-white
-                      [&>p]:mb-6
-                      [&>ul]:list-none [&>ul]:space-y-4 [&>ul]:mb-8 [&>ul]:pl-0
-                      [&>ul>li]:relative [&>ul>li]:pl-6
-                      [&>ul>li::before]:content-[''] [&>ul>li::before]:absolute [&>ul>li::before]:left-0 [&>ul>li::before]:top-[0.6em] [&>ul>li::before]:w-3 [&>ul>li::before]:h-3 [&>ul>li::before]:bg-black [&>ul>li::before]:dark:bg-white [&>ul>li::before]:border-2 [&>ul>li::before]:border-black [&>ul>li::before]:dark:border-white
-                      [&>ul>li>b]:font-black [&>ul>li>b]:uppercase [&>ul>li>b]:tracking-wide [&>ul>li>b]:mr-2
-                      [&>ol]:list-decimal [&>ol]:space-y-4 [&>ol]:mb-8 [&>ol]:pl-6 [&>ol]:font-bold
-                      [&>ol>li]:pl-2
-                      [&>ol>li>b]:font-black [&>ol>li>b]:uppercase [&>ol>li>b]:tracking-wide [&>ol>li>b]:mr-2
+                      text-xl md:text-2xl text-foreground font-serif-italic leading-relaxed
+                      [&>h3]:text-2xl [&>h3]:md:text-4xl [&>h3]:font-bold [&>h3]:uppercase [&>h3]:tracking-tighter [&>h3]:mt-16 [&>h3]:mb-8 [&>h3]:text-foreground [&>h3]:font-sans [&>h3]:not-italic
+                      [&>p]:mb-10
+                      [&>ul]:list-none [&>ul]:space-y-6 [&>ul]:mb-10 [&>ul]:pl-0
+                      [&>ul>li]:relative [&>ul>li]:pl-10
+                      [&>ul>li::before]:content-['*'] [&>ul>li::before]:absolute [&>ul>li::before]:left-0 [&>ul>li::before]:top-0 [&>ul>li::before]:text-accent [&>ul>li::before]:text-2xl
+                      [&>ul>li>b]:font-bold [&>ul>li>b]:uppercase [&>ul>li>b]:tracking-widest [&>ul>li>b]:text-sm [&>ul>li>b]:mr-2 [&>ul>li>b]:font-sans [&>ul>li>b]:not-italic
+                      [&>ol]:list-decimal [&>ol]:space-y-6 [&>ol]:mb-10 [&>ol]:pl-10
+                      [&>ol>li]:pl-4
                     "
                     dangerouslySetInnerHTML={{ __html: POST_CONTENT }}
                   />
 
-                  <div className="mt-16 pt-8 border-t-4 border-black dark:border-white flex flex-col sm:flex-row items-center justify-between gap-6">
-                     <div className="flex items-center gap-4">
-                        <div className="w-16 h-16 bg-[#0055A4] border-4 border-black shadow-[4px_4px_0px_#000000] flex items-center justify-center font-black text-white text-2xl uppercase">
+                  <div className="mt-20 pt-10 border-t border-border flex flex-col md:flex-row items-center justify-between gap-10">
+                     <div className="flex items-center gap-6">
+                        <div className="w-16 h-16 bg-muted border border-border flex items-center justify-center font-bold text-accent text-2xl uppercase">
                           M
                         </div>
                         <div>
-                          <div className="font-black text-xl text-black dark:text-white uppercase tracking-tighter">Team Marvlock</div>
-                          <div className="font-bold text-[#64748B] dark:text-gray-400">Engineering</div>
+                          <div className="font-bold text-xl uppercase tracking-tighter">Team Marvlock</div>
+                          <div className="text-sm font-bold uppercase tracking-widest text-muted-foreground">Engineering Studio</div>
                         </div>
+                     </div>
+                     <div className="flex gap-4">
+                        <button className="text-xs font-bold uppercase tracking-widest px-6 py-3 border border-border hover:bg-foreground hover:text-background transition-colors">
+                          Share
+                        </button>
+                        <button className="text-xs font-bold uppercase tracking-widest px-6 py-3 bg-accent text-white hover:bg-foreground transition-colors">
+                          Subscribe
+                        </button>
                      </div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
 
             </motion.div>
           </div>

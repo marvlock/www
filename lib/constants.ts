@@ -39,12 +39,36 @@ export const SOCIAL_LINKS = [
 
 export const PROJECTS = [
   {
+    name: "Synapse",
+    description: "A unified memory platform with web app, API, MCP server, and Chrome extension.",
+    stack: ["Full Stack", "TypeScript", "Python", "MCP"],
+    githubUrl: "https://github.com/marvlock/synapse",
+    liveUrl: "https://synapse-frontend-gamma.vercel.app/",
+    imageUrl: "/synapse.png"
+  },
+  {
+    name: "Replied",
+    description: "Anonymous sanctuary for professional curation with a modern full-stack architecture.",
+    stack: ["Full Stack", "Next.js", "TypeScript", "Go"],
+    githubUrl: "https://github.com/marvellousz/replied",
+    liveUrl: "https://replied.marvlock.dev",
+    imageUrl: "/replied.png"
+  },
+  {
+    name: "GhostForm",
+    description: "Privacy-first form builder with server-side validation, rate limiting, and zero tracking.",
+    stack: ["Full Stack", "Nuxt", "MongoDB", "TypeScript"],
+    githubUrl: "https://github.com/marvlock/ghostform",
+    liveUrl: "https://ghostform.marvlock.dev",
+    imageUrl: "/ghostform.png"
+  },
+  {
     name: "Things",
     description: "A collection of beautifully designed, blocky components that embrace a bold, raw aesthetic. Copy, paste, customize.",
     stack: ["UI/UX", "Next.js", "React", "TypeScript", "Tailwind CSS"],
     githubUrl: "https://github.com/marvellousz/things",
     liveUrl: "https://things.marvlock.dev",
-    imageUrl: "https://vz1c70bqc3.ufs.sh/f/xvyiJUSZFkzW3TP52we21QOI0roAJCzZXBmwha4RS9Ptxueq"
+    imageUrl: "/things.png"
   },
   {
     name: "NullBin",
@@ -52,7 +76,7 @@ export const PROJECTS = [
     stack: ["Full-Stack", "Next.js 15", "React", "TypeScript", "Tailwind CSS", "MongoDB", "Web Crypto API", "Shiki"],
     githubUrl: "https://github.com/marvellousz/nullbin",
     liveUrl: "https://nullbin.marvlock.dev",
-    imageUrl: "https://vz1c70bqc3.ufs.sh/f/xvyiJUSZFkzWrq4BprVXT1YkprDaohjJ2mtCiuHGMbLsvwSK"
+    imageUrl: "/nullbin.png"
   },
   {
     name: "Schedulo",
@@ -60,23 +84,7 @@ export const PROJECTS = [
     stack: ["Full-Stack", "Next.js", "React 19", "TypeScript", "Tailwind CSS", "NextAuth.js", "Google APIs"],
     githubUrl: "https://github.com/marvellousz/schedulo",
     liveUrl: "https://schedulo.marvlock.dev",
-    imageUrl: "https://vz1c70bqc3.ufs.sh/f/xvyiJUSZFkzW2Qdk6kW8FvUfYPLoDnk5m4EWIh9GduC6X7Q1"
-  },
-  {
-    name: "GhostForm",
-    description: "A privacy-first form builder with server-side validation, rate limiting, and zero tracking.",
-    stack: ["Full-Stack", "Nuxt", "MongoDB", "TypeScript"],
-    githubUrl: "https://github.com/marvlock/ghostform",
-    liveUrl: "https://ghostform.marvlock.dev",
-    imageUrl: "https://vz1c70bqc3.ufs.sh/f/xvyiJUSZFkzW0lX9iHZprYUuChWnfLdlKDAb72za0PZTyt49"
-  },
-  {
-    name: "Replied",
-    description: "The anonymous sanctuary for professional curation.",
-    stack: ["Full-Stack", "Next.js", "Go", "Supabase", "Drizzle"],
-    githubUrl: "https://github.com/marvellousz/replied",
-    liveUrl: "https://replied.marvlock.dev",
-    imageUrl: "https://vz1c70bqc3.ufs.sh/f/xvyiJUSZFkzWCx5jFunzkXWrVGBjxTYQ6dH250tnEv8NwDIg"
+    imageUrl: "/schedulo.png"
   }
 ] as const
 export const CONTACT_EMAIL = "marvlock.dev@gmail.com"

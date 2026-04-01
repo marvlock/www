@@ -33,72 +33,66 @@ const POSTS = [
 
 export default function BlogPage() {
   return (
-    <div className="bg-[#ecece6] dark:bg-zinc-900 text-[#0E1117] dark:text-white relative min-h-screen flex flex-col transition-colors">
-      <div className="fixed inset-0 z-0 bg-[#f4f4f0] dark:bg-[#121212]">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#00000010_1px,transparent_1px),linear-gradient(to_bottom,#00000010_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#ffffff10_1px,transparent_1px),linear-gradient(to_bottom,#ffffff10_1px,transparent_1px)] bg-[size:2rem_2rem]"></div>
-      </div>
-      
+    <div className="bg-background text-foreground relative min-h-screen flex flex-col transition-colors">
       <div className="relative z-10 flex flex-col flex-1">
         <Navigation isVisible={true} />
         
-        <main className="flex-1 pt-32 pb-24 px-4 sm:px-6">
-          <div className="container mx-auto max-w-5xl w-full">
+        <main className="flex-1 pt-32 md:pt-48 pb-24 px-6 md:px-10">
+          <div className="container mx-auto max-w-7xl w-full">
             <motion.div
-              initial="initial"
-              animate="animate"
-              variants={animationVariants.staggerContainer}
-              className="space-y-16 sm:space-y-24"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="space-y-20 md:space-y-32"
             >
-              <motion.div variants={animationVariants.slideUp} className="text-left border-black dark:border-white border-b-8 pb-12 mb-12">
-                <h1 className="text-6xl sm:text-7xl md:text-9xl font-black uppercase tracking-tighter leading-none mb-6 text-black dark:text-white">
+              <div className="max-w-4xl">
+                <h1 className="text-[14vw] md:text-[10vw] font-bold uppercase tracking-tighter leading-[0.85] mb-8">
                   Our <br />
-                  <span className="text-[#0055A4]">Thoughts.</span>
+                  <span className="font-serif-italic normal-case text-accent">Thoughts.</span>
                 </h1>
-                <div className="bg-[#FFD700] p-4 sm:p-6 border-4 border-black inline-block shadow-[8px_8px_0px_#000000]">
-                  <p className="text-xl sm:text-2xl font-black text-black uppercase tracking-wide">
-                    Design, Engineering, and Business Insights.
-                  </p>
-                </div>
-              </motion.div>
+                <p className="text-xl md:text-3xl font-serif-italic text-muted-foreground leading-relaxed">
+                  Design, Engineering, and Business Insights from the Marvlock team.
+                </p>
+              </div>
 
-              <div className="space-y-12">
+              <div className="divide-y divide-border">
                 {POSTS.map((post, index) => (
                   <motion.article
                     key={index}
-                    variants={animationVariants.slideUp}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1 }}
                     className="group"
                   >
-                    <motion.a 
+                    <a 
                       href={"/blog/" + post.title.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')}
-                      className="block bg-white dark:bg-[#121212] border-4 border-black dark:border-white shadow-[8px_8px_0px_#000000] dark:shadow-[8px_8px_0px_#ffffff] transition-all p-6 sm:p-10 cursor-pointer relative overflow-hidden" 
-                      whileHover={{ 
-                        y: -8, 
-                        x: -8, 
-                        boxShadow: "16px 16px 0px " + post.color 
-                      }}
+                      className="block py-12 md:py-20 group"
                     >
-                      <div className="absolute top-0 left-0 w-4 h-full" style={{ backgroundColor: post.color }}></div>
-                      
-                      <div className="pl-6 sm:pl-8 flex flex-col md:flex-row gap-6 md:gap-12 md:items-start justify-between relative z-10">
-                        <div className="flex-1 space-y-4">
-                          <div className="flex flex-wrap items-center gap-4 text-xs sm:text-sm font-black uppercase tracking-widest text-[#64748B] dark:text-gray-400">
-                            <span className="bg-[#ecece6] dark:bg-zinc-800 text-black dark:text-white px-3 py-1 border-2 border-black dark:border-white">
-                              {post.category}
-                            </span>
-                            <span>{post.date}</span>
+                      <div className="grid md:grid-cols-12 gap-8 items-start">
+                        <div className="md:col-span-3 text-xs font-bold uppercase tracking-widest text-muted-foreground pt-3 flex items-center gap-3">
+                          <span className="w-2 h-2 rounded-full bg-accent" />
+                          {post.date}
+                        </div>
+                        
+                        <div className="md:col-span-7 space-y-6">
+                          <div className="text-sm font-bold uppercase tracking-widest text-accent flex items-center gap-2">
+                             <span className="font-serif-italic lowercase text-lg">in</span> {post.category}
                           </div>
-                          <h2 className="text-3xl sm:text-5xl font-black uppercase tracking-tighter text-black dark:text-white leading-tight group-hover:underline decoration-4 underline-offset-4" style={{ textDecorationColor: post.color }}>
+                          <h2 className="text-4xl md:text-7xl font-bold uppercase tracking-tighter leading-[0.9] group-hover:text-accent transition-colors">
                             {post.title}
                           </h2>
-                          <p className="text-lg sm:text-xl font-medium text-black dark:text-gray-300 max-w-3xl">
+                          <p className="text-lg md:text-2xl font-serif-italic text-muted-foreground leading-relaxed max-w-2xl">
                             {post.excerpt}
                           </p>
                         </div>
-                        <div className="hidden md:flex items-center justify-center p-4">
-                          <ArrowRight className="w-12 h-12 text-black dark:text-white group-hover:translate-x-4 transition-transform" strokeWidth={3} />
+
+                        <div className="md:col-span-2 md:flex justify-end pt-3">
+                          <div className="w-12 h-12 rounded-full border border-border flex items-center justify-center group-hover:bg-accent group-hover:border-accent group-hover:text-background transition-all duration-500">
+                             <ArrowRight className="w-6 h-6" />
+                          </div>
                         </div>
                       </div>
-                    </motion.a>
+                    </a>
                   </motion.article>
                 ))}
               </div>

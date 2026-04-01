@@ -1,9 +1,9 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Button } from "@/components/ui/button"
 import { animationVariants } from "@/lib/animations"
 import { useLenis } from "@/components/ui/smooth-scroll-provider"
+import { DepthImage3D } from "@/components/ui/depth-image-3d"
 
 export function HeroSection() {
   const lenis = useLenis()
@@ -16,80 +16,71 @@ export function HeroSection() {
     }
   }
 
+  const handleScrollToWork = (e: React.MouseEvent) => {
+    e.preventDefault()
+    if (lenis) {
+      lenis.scrollTo('#work', { offset: 0, duration: 1.2 })
+    } else {
+      document.getElementById('work')?.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
   return (
-    <section className="flex items-center justify-center px-4 sm:px-6 pt-20 sm:pt-32 pb-24 sm:pb-32 relative z-10 min-h-screen border-b-8 border-black dark:border-white">
-
-      <div className="container mx-auto max-w-7xl w-full relative z-10 min-h-[70vh] md:min-h-0">
-        <div className="grid md:grid-cols-2 gap-0 md:gap-0 items-stretch border-4 border-black dark:border-white bg-white dark:bg-[#121212] overflow-hidden">
-          
-          {/* Left Column - Text */}
-          <motion.div
-            initial="initial"
-            animate="animate"
-            variants={animationVariants.staggerContainer}
-            className="text-center md:text-left p-8 md:p-16 relative z-20 flex flex-col justify-center border-b-4 md:border-b-0 md:border-r-4 border-black dark:border-white bg-[#ecece6] dark:bg-zinc-900"
-          >
-            <motion.h1
-              variants={animationVariants.slideUp}
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-none tracking-tighter text-black dark:text-white uppercase"
-            >
-              <div className="flex flex-col gap-2">
-                <span className="bg-clip-text">Shaping</span>
-                <span className="bg-clip-text">Digital</span>
-                <span className="text-[#E32726]">Products.</span>
-              </div>
+    <section className="relative overflow-hidden pb-16 pt-28 md:pb-24 md:pt-36">
+      <div className="pointer-events-none absolute inset-0 opacity-60">
+        <div className="absolute left-[8%] top-24 h-56 w-56 rounded-full bg-[radial-gradient(circle,rgba(255,141,81,0.26),rgba(255,141,81,0))]" />
+        <div className="absolute bottom-0 right-[12%] h-64 w-64 rounded-full bg-[radial-gradient(circle,rgba(49,73,116,0.18),rgba(49,73,116,0))]" />
+      </div>
+      <motion.div
+        initial="initial"
+        animate="animate"
+        variants={animationVariants.staggerContainer}
+        className="section-shell relative z-10"
+      >
+        <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+          <div>
+            <motion.h1 className="text-[13vw] font-extrabold leading-[0.82] tracking-[-0.04em] text-foreground md:text-[8.5vw] lg:text-[6.6rem]">
+              {[
+                "Digital products",
+                "that feel",
+                "inevitable.",
+              ].map((line, i) => (
+                <motion.span key={line} variants={animationVariants.textReveal} className="block">
+                  {i === 1 ? <span className="font-serif-italic font-medium">{line}</span> : line}
+                </motion.span>
+              ))}
             </motion.h1>
-            
-            <motion.p
-              variants={animationVariants.slideUp}
-              className="text-lg sm:text-xl font-medium text-black dark:text-white mt-8 tracking-tight max-w-md"
-            >
-              Strategy, design, and delivery. We turn ideas into bold digital structures.
-            </motion.p>
-            
-            <motion.div variants={animationVariants.slideUp} className="mt-10">
-              <Button 
-                onClick={handleScrollToContact}
-                className="rounded-none bg-[#0055A4] hover:bg-[#004080] text-white font-bold text-lg px-8 py-6 border-4 border-black dark:border-white shadow-[8px_8px_0px_#000000] dark:shadow-[8px_8px_0px_#ffffff] hover:translate-y-[4px] hover:translate-x-[4px] hover:shadow-[4px_4px_0px_#000000] dark:hover:shadow-[4px_4px_0px_#ffffff] transition-all"
-              >
-                START A PROJECT
-              </Button>
-            </motion.div>
-          </motion.div>
 
-          {/* Right Column - Geometric Imagery */}
+            <motion.p variants={animationVariants.textReveal} className="mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground md:text-xl">
+              Marvlock helps founders and teams ship websites and apps that are fast, clear, and conversion-minded. Strategy, design, and engineering move in one rhythm.
+            </motion.p>
+
+            <motion.div variants={animationVariants.textReveal} className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
+            <button 
+              onClick={handleScrollToContact}
+                className="rounded-full bg-foreground px-8 py-4 text-sm font-bold uppercase tracking-[0.16em] text-background transition-all duration-300 hover:-translate-y-0.5 hover:bg-accent"
+            >
+              Start a Project
+            </button>
+            <button 
+              onClick={handleScrollToWork}
+                className="rounded-full border border-border bg-background/70 px-8 py-4 text-sm font-bold uppercase tracking-[0.16em] text-foreground transition-all duration-300 hover:-translate-y-0.5 hover:border-accent hover:text-accent"
+            >
+              View Our Work
+            </button>
+            </motion.div>
+          </div>
+
           <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="relative flex justify-center items-center w-full min-h-[400px] md:min-h-0 bg-[#FFD700] dark:bg-[#857300]"
+            variants={animationVariants.textReveal}
+            className="h-[500px] w-full md:h-[620px] lg:-mt-16 lg:h-[720px]"
           >
-            <div className="relative w-full h-full p-8 flex items-center justify-center">
-              {/* Bauhaus Graphic Comp */}
-              <div className="relative w-64 h-64 md:w-80 md:h-80">
-                <motion.div 
-                  initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
-                  transition={{ type: "spring", delay: 0.5 }}
-                  className="absolute top-0 right-0 w-32 h-32 md:w-40 md:h-40 rounded-full bg-[#E32726] border-4 border-black dark:border-white shadow-[-8px_8px_0px_#000000] dark:shadow-[-8px_8px_0px_#ffffff]" 
-                />
-                <motion.div 
-                  initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
-                  transition={{ type: "spring", delay: 0.7 }}
-                  className="absolute bottom-0 left-0 w-40 h-40 md:w-48 md:h-48 bg-[#0055A4] border-4 border-black dark:border-white shadow-[8px_8px_0px_#000000] dark:shadow-[8px_8px_0px_#ffffff]" 
-                />
-                <motion.div 
-                  initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
-                  transition={{ type: "spring", delay: 0.9 }}
-                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 md:w-32 md:h-32 bg-white dark:bg-black border-4 border-black dark:border-white shadow-[8px_8px_0px_#E32726] dark:shadow-[8px_8px_0px_#E32726] rotate-45" 
-                />
-              </div>
+            <div className="h-full w-full">
+              <DepthImage3D />
             </div>
           </motion.div>
         </div>
-      </div>
+      </motion.div>
     </section>
   )
 }

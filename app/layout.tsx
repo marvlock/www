@@ -1,12 +1,18 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Manrope, Fraunces } from 'next/font/google'
 import './globals.css'
 import { AppWrapper } from '@/components/ui/app-wrapper'
 import { ThemeProvider } from '@/components/theme-provider'
 
-const inter = Inter({
+const manrope = Manrope({
   subsets: ['latin'],
-  variable: '--font-inter',
+  variable: '--font-manrope',
+  display: 'swap',
+})
+
+const fraunces = Fraunces({
+  subsets: ['latin'],
+  variable: '--font-fraunces',
   display: 'swap',
 })
 
@@ -45,18 +51,19 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning className={`${inter.variable}`}>
+    <html lang="en" suppressHydrationWarning className={`${manrope.variable} ${fraunces.variable}`}>
       <head>
         <style>{`
 html {
-  --font-body: var(--font-inter), sans-serif;
-  --font-heading: var(--font-inter), sans-serif;
+  --font-body: var(--font-manrope), sans-serif;
+  --font-heading: var(--font-manrope), sans-serif;
+  --font-serif-italic: var(--font-fraunces), serif;
   font-family: var(--font-body);
 }
         `}</style>
       </head>
       <body>
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+        <ThemeProvider attribute="class" defaultTheme="light" forcedTheme="light" enableSystem={false}>
           <AppWrapper>
             {children}
           </AppWrapper>

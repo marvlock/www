@@ -3,7 +3,7 @@
 import { Navigation } from "@/components/layout/Navigation"
 import { Footer } from "@/components/layout/Footer"
 import { HeroSection } from "@/components/sections/HeroSection"
-import { ApproachSection } from "@/components/sections/ApproachSection"
+import { IntroductionSection } from "@/components/sections/IntroductionSection"
 import { ServicesSection } from "@/components/sections/ServicesSection"
 import { WorkSection } from "@/components/sections/WorkSection"
 // import { TestimonialsSection } from "@/components/sections/TestimonialsSection"
@@ -11,27 +11,19 @@ import { FAQSection } from "@/components/sections/FAQSection"
 import { ContactSection } from "@/components/sections/ContactSection"
 import { ChatButton } from "@/components/ui/chat-button"
 
-import { useTheme } from "next-themes"
-import { useEffect, useState } from "react"
-
 export default function Component() {
-  const { theme } = useTheme()
-  const [mounted, setMounted] = useState(false)
-
-  useEffect(() => {
-    setMounted(true)
-  }, [])
-
   return (
-    <div className="bg-white dark:bg-[#0E1117] text-[#0E1117] dark:text-white relative overflow-x-hidden transition-colors">
-      <div className="fixed inset-0 z-0 bg-[#f4f4f0] dark:bg-[#121212]">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#00000010_1px,transparent_1px),linear-gradient(to_bottom,#00000010_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#ffffff10_1px,transparent_1px),linear-gradient(to_bottom,#ffffff10_1px,transparent_1px)] bg-[size:2rem_2rem]"></div>
+    <div className="bg-background text-foreground relative overflow-x-hidden min-h-screen">
+      <div className="pointer-events-none absolute inset-0 opacity-70">
+        <div className="absolute -top-28 left-1/2 h-[32rem] w-[32rem] -translate-x-1/2 rounded-full bg-[radial-gradient(circle,rgba(255,130,72,0.2)_0%,rgba(255,130,72,0)_65%)]" />
+        <div className="absolute top-[30rem] -left-40 h-[30rem] w-[30rem] rounded-full bg-[radial-gradient(circle,rgba(27,47,86,0.12)_0%,rgba(27,47,86,0)_68%)]" />
+        <div className="absolute bottom-[-12rem] right-[-10rem] h-[36rem] w-[36rem] rounded-full bg-[radial-gradient(circle,rgba(193,120,64,0.14)_0%,rgba(193,120,64,0)_70%)]" />
       </div>
-      <div className="relative z-10">
+      <div className="relative z-10 font-sans">
         <Navigation isVisible={true} />
-      <HeroSection />
-      <ApproachSection />
-      <ServicesSection />
+        <HeroSection />
+        <IntroductionSection />
+        <ServicesSection />
       <WorkSection />
       {/* <TestimonialsSection /> */}
       <FAQSection />
