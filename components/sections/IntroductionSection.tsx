@@ -11,7 +11,7 @@ export function IntroductionSection() {
   ]
 
   return (
-    <section id="approach" className="py-20 md:py-28">
+    <section id="approach" className="py-12 md:py-16">
       <div className="section-shell">
         <motion.div
           initial="initial"

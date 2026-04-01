@@ -26,7 +26,7 @@ export function HeroSection() {
   }
 
   return (
-    <section className="relative overflow-hidden pb-16 pt-28 md:pb-24 md:pt-36">
+    <section className="relative overflow-hidden pb-8 pt-20 md:pb-12 md:pt-24">
       <div className="pointer-events-none absolute inset-0 opacity-60">
         <div className="absolute left-[8%] top-24 h-56 w-56 rounded-full bg-[radial-gradient(circle,rgba(255,141,81,0.26),rgba(255,141,81,0))]" />
         <div className="absolute bottom-0 right-[12%] h-64 w-64 rounded-full bg-[radial-gradient(circle,rgba(49,73,116,0.18),rgba(49,73,116,0))]" />
@@ -37,9 +37,9 @@ export function HeroSection() {
         variants={animationVariants.staggerContainer}
         className="section-shell relative z-10"
       >
-        <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+        <div className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
           <div>
-            <motion.h1 className="text-4xl font-extrabold leading-[0.82] tracking-[-0.04em] text-foreground md:text-5xl lg:text-7xl">
+            <motion.h1 className="text-2xl font-extrabold leading-[0.82] tracking-[-0.04em] text-foreground md:text-3xl lg:text-4xl">
               {[
                 "Digital products",
                 "that feel",
@@ -51,11 +51,11 @@ export function HeroSection() {
               ))}
             </motion.h1>
 
-            <motion.p variants={animationVariants.textReveal} className="mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground md:text-xl">
+            <motion.p variants={animationVariants.textReveal} className="mt-4 max-w-2xl text-lg leading-relaxed text-muted-foreground md:text-xl">
               Marvlock helps founders and teams ship websites and apps that are fast, clear, and conversion-minded. Strategy, design, and engineering move in one rhythm.
             </motion.p>
 
-            <motion.div variants={animationVariants.textReveal} className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
+            <motion.div variants={animationVariants.textReveal} className="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center">
             <button 
               onClick={handleScrollToContact}
                 className="rounded-full bg-foreground px-8 py-4 text-sm font-bold uppercase tracking-[0.16em] text-background transition-all duration-300 hover:-translate-y-0.5 hover:bg-accent"
@@ -73,7 +73,7 @@ export function HeroSection() {
 
           <motion.div
             variants={animationVariants.textReveal}
-            className="h-[500px] w-full md:h-[620px] lg:-mt-16 lg:h-[720px]"
+            className="h-[400px] w-full md:h-[480px] lg:-mt-12 lg:h-[560px]"
           >
             <div className="h-full w-full">
               <DepthImage3D />

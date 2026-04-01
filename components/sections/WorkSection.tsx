@@ -6,7 +6,7 @@ import { PROJECTS } from "@/lib/constants"
 
 export function WorkSection() {
   return (
-    <section id="work" className="py-20 md:py-28">
+    <section id="work" className="py-12 md:py-16">
       <div className="section-shell">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

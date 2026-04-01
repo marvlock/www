@@ -5,13 +5,13 @@ import { CONTACT_EMAIL } from "@/lib/constants"
 
 export function ContactSection() {
   return (
-    <section id="contact" className="py-20 md:py-28">
+    <section id="contact" className="py-12 md:py-16">
       <div className="section-shell">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="glass-surface relative overflow-hidden rounded-3xl px-6 py-16 text-center md:px-10"
+          className="glass-surface relative overflow-hidden rounded-3xl px-6 py-10 text-center md:px-10"
         >
           <div className="pointer-events-none absolute inset-0 opacity-70">
             <div className="absolute left-8 top-8 h-20 w-20 rounded-full border border-accent/25" />
@@ -19,7 +19,7 @@ export function ContactSection() {
           </div>
 
           <p className="section-kicker">Let us build with you</p>
-          <h2 className="mx-auto max-w-4xl text-3xl font-extrabold leading-[0.9] tracking-tight md:text-5xl">
+          <h2 className="mx-auto max-w-4xl text-2xl font-extrabold leading-[0.9] tracking-tight md:text-3xl">
             Ready to turn the next idea into a shipped product?
           </h2>
           

@@ -6,14 +6,14 @@ import { Palette, Code, TrendingUp } from "lucide-react"
 
 export function ApproachSection() {
   return (
-    <section id="approach" className="py-20 md:py-32 px-6 bg-background">
+    <section id="approach" className="py-12 md:py-16 px-6 bg-background">
       <div className="container mx-auto max-w-7xl">
         <div className="grid md:grid-cols-2 gap-10 md:gap-20 mb-20 md:mb-32">
           <motion.h2 
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="text-2xl md:text-4xl font-bold uppercase tracking-tighter leading-[0.9]"
+            className="text-xl md:text-2xl font-bold uppercase tracking-tighter leading-[0.9]"
           >
             Everything you need. <br />
             <span className="text-accent underline decoration-2 underline-offset-8">Nothing you don't.</span>

@@ -444,7 +444,7 @@
   }
 
   .section-title {
-    @apply text-2xl font-extrabold leading-[0.92] tracking-tight md:text-4xl;
+    @apply text-lg font-extrabold leading-[0.92] tracking-tight md:text-2xl;
   }
 
   .glass-surface {

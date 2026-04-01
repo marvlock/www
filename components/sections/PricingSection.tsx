@@ -62,7 +62,7 @@ export function PricingSection() {
   ]
 
   return (
-    <section id="pricing" className="py-20 sm:py-32 px-4 sm:px-6 relative z-10">
+    <section id="pricing" className="py-12 sm:py-16 px-4 sm:px-6 relative z-10">
       <div className="container mx-auto max-w-7xl w-full">
         <motion.div
           initial="initial"
@@ -72,7 +72,7 @@ export function PricingSection() {
           className="space-y-16 sm:space-y-20"
         >
           <motion.div variants={animationVariants.slideUp} className="text-center max-w-3xl mx-auto">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-medium leading-tight mb-4 text-[#0E1117]" style={{ fontFamily: 'var(--font-heading)' }}>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-medium leading-tight mb-4 text-[#0E1117]" style={{ fontFamily: 'var(--font-heading)' }}>
               Pricing
             </h2>
           </motion.div>

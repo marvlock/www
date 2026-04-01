@@ -5,7 +5,7 @@ import { animationVariants, viewportOptions } from "@/lib/animations"
 
 export function CapabilitiesSection() {
   return (
-    <section id="capabilities" className="py-20 sm:py-32 px-4 sm:px-6 relative z-10">
+    <section id="capabilities" className="py-12 sm:py-16 px-4 sm:px-6 relative z-10">
       <div className="container mx-auto max-w-4xl w-full">
         <motion.div
           initial="initial"
@@ -15,7 +15,7 @@ export function CapabilitiesSection() {
           className="space-y-8 sm:space-y-12"
         >
           <motion.div variants={animationVariants.slideUp} className="text-center max-w-3xl mx-auto">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-4 sm:mb-6" style={{ fontFamily: 'var(--font-heading)' }}>
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-3xl font-bold leading-tight mb-4 sm:mb-6" style={{ fontFamily: 'var(--font-heading)' }}>
               What We Do
             </h2>
             <div className="w-24 sm:w-32 h-0.5 bg-gradient-to-r from-transparent via-white/30 to-transparent mx-auto"></div>
