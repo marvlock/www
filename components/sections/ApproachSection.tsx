@@ -13,7 +13,7 @@ export function ApproachSection() {
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-7xl font-bold uppercase tracking-tighter leading-[0.9]"
+            className="text-2xl md:text-4xl font-bold uppercase tracking-tighter leading-[0.9]"
           >
             Everything you need. <br />
             <span className="text-accent underline decoration-2 underline-offset-8">Nothing you don't.</span>

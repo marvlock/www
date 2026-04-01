@@ -19,7 +19,7 @@ export function ContactSection() {
           </div>
 
           <p className="section-kicker">Let us build with you</p>
-          <h2 className="mx-auto max-w-4xl text-5xl font-extrabold leading-[0.9] tracking-tight md:text-7xl">
+          <h2 className="mx-auto max-w-4xl text-3xl font-extrabold leading-[0.9] tracking-tight md:text-5xl">
             Ready to turn the next idea into a shipped product?
           </h2>
           

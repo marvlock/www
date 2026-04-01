@@ -39,7 +39,7 @@ export function HeroSection() {
       >
         <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
           <div>
-            <motion.h1 className="text-[13vw] font-extrabold leading-[0.82] tracking-[-0.04em] text-foreground md:text-[8.5vw] lg:text-[6.6rem]">
+            <motion.h1 className="text-4xl font-extrabold leading-[0.82] tracking-[-0.04em] text-foreground md:text-5xl lg:text-7xl">
               {[
                 "Digital products",
                 "that feel",
