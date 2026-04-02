@@ -1,13 +1,56 @@
 "use client"
 
+import Image from "next/image"
 import { motion } from "framer-motion"
 import { animationVariants } from "@/lib/animations"
 
 export function IntroductionSection() {
-  const highlights = [
-    "Product strategy shaped by user behavior",
-    "Visual systems that stay coherent at scale",
-    "Engineering that keeps performance non-negotiable",
+  const lines = [
+    {
+      id: "line-1",
+      content: (
+        <>
+          <span className="mr-2 text-accent">*</span>
+          Marvlock is a software and digital product studio
+          <span className="mx-2 inline-block align-middle">
+            <InlineAsset src="/assets/tomato.png" alt="Tomato" />
+          </span>
+          for founders and ambitious teams.
+        </>
+      ),
+    },
+    {
+      id: "line-2",
+      content: (
+        <>
+          We combine <em className="font-serif-italic">product strategy, UX design, and modern engineering</em>
+          <span className="mx-2 inline-block align-middle">
+            <InlineAsset src="/assets/lamp.png" alt="Lamp" />
+          </span>
+          into one clear software roadmap.
+        </>
+      ),
+    },
+    {
+      id: "line-3",
+      content: (
+        <>
+          Every project runs end-to-end, from discovery to launch
+          <span className="mx-2 inline-block align-middle">
+            <InlineAsset src="/assets/water.png" alt="Water texture" />
+          </span>
+          to ship websites, apps, and internal tools.
+        </>
+      ),
+    },
+    {
+      id: "line-4",
+      content: (
+        <>
+          We stay hands-on to turn complex ideas into software people use and products businesses can scale.
+        </>
+      ),
+    },
   ]
 
   return (
@@ -18,34 +61,33 @@ export function IntroductionSection() {
           whileInView="animate"
           viewport={{ once: true }}
           variants={animationVariants.staggerContainer}
-          className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr]"
+          className="mx-auto max-w-6xl"
         >
-          <div>
-            <motion.p variants={animationVariants.textReveal} className="section-kicker">
-              Our Approach
-            </motion.p>
-            <motion.h2 variants={animationVariants.textReveal} className="section-title max-w-3xl">
-              Built like a product team, not an outsourced queue.
-            </motion.h2>
-            <motion.p variants={animationVariants.textReveal} className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-              Marvlock combines product thinking, design craft, and pragmatic engineering in a single workflow.
-              We prototype early, validate quickly, and ship in tight loops so the final result feels focused from day one.
-            </motion.p>
+          <div className="space-y-3 md:space-y-4">
+            {lines.map((line, index) => (
+              <motion.p
+                key={line.id}
+                initial={{ opacity: 0, y: 26 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.6 }}
+                transition={{ duration: 0.55, delay: 0.08 * index }}
+                className="text-2xl font-extrabold leading-[1.16] tracking-tight text-foreground md:text-3xl lg:text-4xl"
+              >
+                {line.content}
+              </motion.p>
+            ))}
           </div>
-
-          <motion.div variants={animationVariants.textReveal} className="glass-surface rounded-3xl p-6 md:p-8">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">How we work</p>
-            <div className="mt-5 space-y-4">
-              {highlights.map((item) => (
-                <div key={item} className="flex items-start gap-3 rounded-2xl border border-border/70 bg-white/65 px-4 py-3">
-                  <span className="mt-2 h-2 w-2 rounded-full bg-accent" />
-                  <p className="text-sm leading-relaxed text-foreground/90 md:text-base">{item}</p>
-                </div>
-              ))}
-            </div>
-          </motion.div>
         </motion.div>
       </div>
     </section>
+  )
+}
+
+function InlineAsset({ src, alt }: { src: string; alt: string }) {
+  return (
+    <span className="relative inline-block w-11 overflow-hidden rounded-sm border border-border/70 bg-card align-middle md:w-12">
+      <span className="block aspect-video" />
+      <Image src={src} alt={alt} fill sizes="200px" className="object-cover" />
+    </span>
   )
 }

@@ -9,7 +9,7 @@ export function ChatButton() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 1, duration: 0.5 }}
-      className="fixed bottom-10 right-10 z-[100]"
+      className="fixed bottom-8 right-6 z-100"
     >
       <motion.a
         href="https://cal.com/pranavmurali"

@@ -26,7 +26,7 @@ export function HeroSection() {
   }
 
   return (
-    <section className="relative overflow-hidden pb-8 pt-20 md:pb-12 md:pt-24">
+    <section className="relative flex min-h-screen items-center overflow-hidden pb-8 pt-20 md:pb-12 md:pt-24">
       <div className="pointer-events-none absolute inset-0 opacity-60">
         <div className="absolute left-[8%] top-24 h-56 w-56 rounded-full bg-[radial-gradient(circle,rgba(255,141,81,0.26),rgba(255,141,81,0))]" />
         <div className="absolute bottom-0 right-[12%] h-64 w-64 rounded-full bg-[radial-gradient(circle,rgba(49,73,116,0.18),rgba(49,73,116,0))]" />
@@ -73,7 +73,7 @@ export function HeroSection() {
 
           <motion.div
             variants={animationVariants.textReveal}
-            className="h-[400px] w-full md:h-[480px] lg:-mt-12 lg:h-[560px]"
+            className="h-100 w-full md:h-120 lg:-mt-12 lg:h-140"
           >
             <div className="h-full w-full">
               <DepthImage3D />
