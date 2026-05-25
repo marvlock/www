@@ -1,6 +1,7 @@
 "use client"
 
-import { SmoothScrollProvider } from './smooth-scroll-provider'
+import { DitherBackground } from "./dither-background"
+import { SmoothScrollProvider } from "./smooth-scroll-provider"
 
 interface AppWrapperProps {
   children: React.ReactNode
@@ -9,7 +10,8 @@ interface AppWrapperProps {
 export function AppWrapper({ children }: AppWrapperProps) {
   return (
     <SmoothScrollProvider>
-      {children}
+      <DitherBackground />
+      <div className="relative z-[1]">{children}</div>
     </SmoothScrollProvider>
   )
-} 
+}

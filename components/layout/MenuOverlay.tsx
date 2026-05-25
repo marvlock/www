@@ -9,9 +9,7 @@ interface MenuOverlayProps {
 }
 
 const MENU_LINKS = [
-  { href: "https://cal.com/pranavmurali", label: "Book a Call" },
   { href: "https://www.pranavmurali.dev/", label: "Founder's Stuff" },
-  { href: "/blog", label: "Our Thoughts" },
   { href: "https://github.com/marvlock", label: "Open Source" },
 ];
 

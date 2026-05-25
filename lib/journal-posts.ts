@@ -1,0 +1,32 @@
+export const JOURNAL_POSTS = [
+  {
+    id: "design",
+    title: "Why Neobrutalism is the Future of Developer Tools",
+    categoryLabel: "DESIGN",
+    authorName: "Marvlock",
+    issue: "001/2024",
+    imageUrl: "/things.png",
+    imageAlt: "Neobrutalism design systems",
+    cardVariant: "teal",
+  },
+  {
+    id: "engineering",
+    title: "Building Scalable Next.js Architectures",
+    categoryLabel: "ENGINEERING",
+    authorName: "Marvlock",
+    issue: "002/2024",
+    imageUrl: "/synapse.png",
+    imageAlt: "Scalable architecture",
+    cardVariant: "violet",
+  },
+  {
+    id: "business",
+    title: "The Reality of Modern Agency Models",
+    categoryLabel: "BUSINESS",
+    authorName: "Marvlock",
+    issue: "003/2024",
+    imageUrl: "/schedulo.png",
+    imageAlt: "Modern agency models",
+    cardVariant: "emerald",
+  },
+] as const

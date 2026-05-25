@@ -2,86 +2,59 @@
 
 import { motion } from "framer-motion"
 import { animationVariants } from "@/lib/animations"
-import { useLenis } from "@/components/ui/smooth-scroll-provider"
 import { DepthImage3D } from "@/components/ui/depth-image-3d"
 
 export function HeroSection() {
-  const lenis = useLenis()
-
-  const handleScrollToContact = () => {
-    if (lenis) {
-      lenis.scrollTo('#contact', { offset: 0, duration: 1.5 })
-    } else {
-      document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
-    }
-  }
-
-  const handleScrollToWork = (e: React.MouseEvent) => {
-    e.preventDefault()
-    if (lenis) {
-      lenis.scrollTo('#work', { offset: 0, duration: 1.2 })
-    } else {
-      document.getElementById('work')?.scrollIntoView({ behavior: 'smooth' })
-    }
-  }
-
   return (
-    <section className="relative flex min-h-screen items-center overflow-hidden pb-8 pt-20 md:pb-12 md:pt-24">
-      <div className="pointer-events-none absolute inset-0 opacity-60">
-        <div className="absolute left-[8%] top-24 h-56 w-56 rounded-full bg-[radial-gradient(circle,rgba(255,141,81,0.26),rgba(255,141,81,0))]" />
-        <div className="absolute bottom-0 right-[12%] h-64 w-64 rounded-full bg-[radial-gradient(circle,rgba(49,73,116,0.18),rgba(49,73,116,0))]" />
-      </div>
+    <section data-hero className="relative flex min-h-screen flex-col">
       <motion.div
         initial="initial"
         animate="animate"
         variants={animationVariants.staggerContainer}
-        className="section-shell relative z-10"
+        className="relative mx-auto flex min-h-screen w-full max-w-[100rem] flex-1 flex-col px-4 md:px-10 lg:px-16 xl:px-24 2xl:px-32"
       >
-        <div className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
-          <div>
-            <motion.h1 className="text-2xl font-extrabold leading-[0.82] tracking-[-0.04em] text-foreground md:text-3xl lg:text-4xl">
-              {[
-                "Digital products",
-                "that feel",
-                "inevitable.",
-              ].map((line, i) => (
-                <motion.span key={line} variants={animationVariants.textReveal} className="block">
-                  {i === 1 ? <span className="font-serif-italic font-medium">{line}</span> : line}
-                </motion.span>
-              ))}
-            </motion.h1>
-
-            <motion.p variants={animationVariants.textReveal} className="mt-4 max-w-2xl text-lg leading-relaxed text-muted-foreground md:text-xl">
-              Marvlock helps founders and teams ship websites and apps that are fast, clear, and conversion-minded. Strategy, design, and engineering move in one rhythm.
-            </motion.p>
-
-            <motion.div variants={animationVariants.textReveal} className="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center">
-            <button 
-              onClick={handleScrollToContact}
-                className="rounded-full bg-foreground px-8 py-4 text-sm font-bold uppercase tracking-[0.16em] text-background transition-all duration-300 hover:-translate-y-0.5 hover:bg-accent"
+        <div className="relative flex flex-1 flex-col pb-20 pt-10 md:pb-32 md:pt-14">
+          {/* Centered shader face */}
+          <div className="pointer-events-none absolute inset-0 z-0 flex items-center justify-center">
+            <motion.div
+              variants={animationVariants.textReveal}
+              className="pointer-events-auto h-[min(58vh,520px)] w-full max-w-[min(92vw,420px)] md:h-[min(68vh,620px)] md:max-w-[480px]"
             >
-              Start a Project
-            </button>
-            <button 
-              onClick={handleScrollToWork}
-                className="rounded-full border border-border bg-background/70 px-8 py-4 text-sm font-bold uppercase tracking-[0.16em] text-foreground transition-all duration-300 hover:-translate-y-0.5 hover:border-accent hover:text-accent"
-            >
-              View Our Work
-            </button>
+              <DepthImage3D />
             </motion.div>
           </div>
 
-          <motion.div
-            variants={animationVariants.textReveal}
-            className="h-100 w-full md:h-120 lg:-mt-12 lg:h-140"
-          >
-            <div className="h-full w-full">
-              <DepthImage3D />
+          <div className="relative z-10 flex flex-1 flex-col gap-8 lg:flex-row lg:items-center lg:justify-between lg:gap-16">
+            <div className="flex w-full shrink-0 flex-col items-center text-center lg:w-fit lg:items-start lg:text-left">
+              <motion.h1
+                variants={animationVariants.textReveal}
+                className="hero-brand-title font-pixelify text-[clamp(3.6rem,17vw,6rem)] leading-none text-white md:text-7xl lg:text-8xl"
+              >
+                marvlock
+              </motion.h1>
+
+              <motion.p
+                variants={animationVariants.textReveal}
+                className="hero-brand-kicker font-pixelify mt-3 text-center text-sm uppercase leading-none text-white/70 md:text-base lg:text-left"
+              >
+                Digital Creative Studio
+              </motion.p>
             </div>
-          </motion.div>
+
+            <div className="flex w-full max-w-md shrink-0 self-center flex-col text-center lg:ml-auto lg:max-w-sm lg:text-right">
+              <motion.p
+                variants={animationVariants.textReveal}
+                className="text-base leading-relaxed text-white/78 md:text-lg"
+              >
+                Marvlock helps founders and teams with web development, app development, logo,
+                website, and product design, plus video editing, 3D modelling, and{" "}
+                <span className="whitespace-nowrap">character generation.</span>
+              </motion.p>
+            </div>
+          </div>
         </div>
+
       </motion.div>
     </section>
   )
 }
-

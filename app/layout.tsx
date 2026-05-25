@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Manrope, Fraunces } from 'next/font/google'
+import { Manrope, Fraunces, Pixelify_Sans } from 'next/font/google'
 import './globals.css'
 import { AppWrapper } from '@/components/ui/app-wrapper'
 import { ThemeProvider } from '@/components/theme-provider'
@@ -13,6 +13,13 @@ const manrope = Manrope({
 const fraunces = Fraunces({
   subsets: ['latin'],
   variable: '--font-fraunces',
+  display: 'swap',
+})
+
+const pixelifySans = Pixelify_Sans({
+  subsets: ['latin'],
+  variable: '--font-pixelify-sans',
+  weight: ['400', '500', '600', '700'],
   display: 'swap',
 })
 
@@ -51,7 +58,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning className={`${manrope.variable} ${fraunces.variable}`}>
+    <html lang="en" suppressHydrationWarning className={`${manrope.variable} ${fraunces.variable} ${pixelifySans.variable}`}>
       <head>
         <style>{`
 html {
