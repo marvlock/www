@@ -59,4 +59,4 @@ export const PROJECTS = [
 ] as const
 
 export const PROJECTS_DESCRIPTION =
-  "A selection of Marvlock projects across product, development, design, and visual storytelling."
+  "A selection of Marvlock software, web, and app projects."

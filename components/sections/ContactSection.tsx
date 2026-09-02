@@ -2,9 +2,8 @@
 
 import { FormEvent, useState } from "react"
 import { motion } from "framer-motion"
-import { CONTACT_CAL_URL, CONTACT_EMAIL } from "@/lib/constants"
-
-const currentYearSuffix = String(new Date().getFullYear()).slice(-2)
+import { toast } from "sonner"
+import { CONTACT_CAL_URL } from "@/lib/constants"
 
 export function ContactSection() {
   const [form, setForm] = useState({
@@ -13,14 +12,39 @@ export function ContactSection() {
     email: "",
     description: "",
   })
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    const subject = encodeURIComponent("New project inquiry from Marvlock website")
-    const body = encodeURIComponent(
-      `Name: ${form.firstName} ${form.lastName}\nEmail: ${form.email}\nDescription: ${form.description || "—"}`,
-    )
-    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`
+    setIsSubmitting(true)
+    const toastId = toast.loading("Sending message...")
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      })
+      const result = await response.json()
+
+      if (!response.ok) {
+        throw new Error(result.error || "We could not send your message.")
+      }
+
+      toast.success("Message sent", {
+        id: toastId,
+        description: "We will be in touch soon.",
+      })
+      setForm({ firstName: "", lastName: "", email: "", description: "" })
+    } catch (error) {
+      toast.error("Message not sent", {
+        id: toastId,
+        description:
+          error instanceof Error ? error.message : "Please try again shortly.",
+      })
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const updateField = (field: keyof typeof form, value: string) => {
@@ -38,19 +62,22 @@ export function ContactSection() {
       >
         <div className="contact-panel-bg" aria-hidden />
 
-        <div className="relative flex flex-col items-center px-6 py-12 md:px-10 md:py-16 lg:px-14 lg:py-20">
-          <h2 className="font-pixelify text-center text-3xl font-medium uppercase tracking-tight text-white md:text-4xl lg:text-5xl">
+        <div className="relative flex flex-col items-center px-4 py-10 sm:px-6 sm:py-14 md:px-10 md:py-16 lg:px-14 lg:py-20">
+          <p className="font-pixelify text-xs uppercase tracking-[0.12em] text-[#4A9B6E]">
+            03 / Start a build
+          </p>
+          <h2 className="font-pixelify mt-3 text-center text-3xl font-medium uppercase tracking-tight text-white md:text-4xl lg:text-5xl">
             Get in touch
           </h2>
           <p className="mt-6 max-w-2xl text-center text-sm leading-relaxed text-white/70 md:mt-8 md:text-base">
-            Have a project in mind? Whether you&apos;re launching a brand, designing a product, or
-            elevating your digital presence, we&apos;re here to bring your vision to life.
+            Have a project in mind? Whether you need software engineering, web or app work,
+            design, or ghostwriting, we&apos;re here to bring your vision to life.
           </p>
           <a
             href={CONTACT_CAL_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="font-pixelify mt-8 inline-flex rounded-full border border-white/25 bg-white/10 px-6 py-3 text-sm font-medium uppercase tracking-[0.12em] text-white transition-colors hover:border-white/45 hover:bg-white/15 md:mt-10"
+            className="font-pixelify mt-8 inline-flex bg-[#C97A3D] px-6 py-3 text-sm font-medium uppercase tracking-[0.08em] text-[#0A0D0C] transition-colors hover:bg-[#E09459] md:mt-10"
           >
             Book a call →
           </a>
@@ -60,15 +87,15 @@ export function ContactSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.08 }}
-            className="contact-form-glass mt-12 w-full max-w-2xl rounded-3xl p-6 md:mt-14 md:p-10 lg:max-w-3xl lg:p-12"
+            className="contact-form-glass mt-10 w-full max-w-2xl rounded-none p-5 sm:mt-12 sm:p-6 md:mt-14 md:p-10 lg:max-w-3xl lg:p-12"
           >
-            <p className="font-pixelify mb-6 text-center text-sm uppercase tracking-[0.14em] text-white/85 md:text-base">
-              Contact us
+            <p className="font-pixelify mb-6 text-sm uppercase tracking-[0.1em] text-[#4A9B6E] md:text-base">
+              &gt; Tell us about your project<span className="terminal-cursor" aria-hidden />
             </p>
 
             <form onSubmit={handleSubmit} className="flex flex-col gap-4">
               <label className="block space-y-2">
-                <span className="text-xs text-white/65">First name</span>
+                <span className="font-pixelify text-xs uppercase tracking-[0.06em] text-white/65">First name</span>
                 <input
                   type="text"
                   name="firstName"
@@ -80,7 +107,7 @@ export function ContactSection() {
                 />
               </label>
               <label className="block space-y-2">
-                <span className="text-xs text-white/65">Last name</span>
+                <span className="font-pixelify text-xs uppercase tracking-[0.06em] text-white/65">Last name</span>
                 <input
                   type="text"
                   name="lastName"
@@ -92,7 +119,7 @@ export function ContactSection() {
                 />
               </label>
               <label className="block space-y-2">
-                <span className="text-xs text-white/65">Email</span>
+                <span className="font-pixelify text-xs uppercase tracking-[0.06em] text-white/65">Email</span>
                 <input
                   type="email"
                   name="email"
@@ -104,7 +131,7 @@ export function ContactSection() {
                 />
               </label>
               <label className="block space-y-2">
-                <span className="text-xs text-white/65">Description</span>
+                <span className="font-pixelify text-xs uppercase tracking-[0.06em] text-white/65">Description</span>
                 <textarea
                   name="description"
                   required
@@ -117,9 +144,10 @@ export function ContactSection() {
 
               <button
                 type="submit"
-                className="font-pixelify mt-2 w-full rounded-full bg-white py-4 text-sm font-medium uppercase tracking-[0.14em] text-foreground transition-opacity hover:opacity-90"
+                disabled={isSubmitting}
+                className="font-pixelify mt-2 w-full bg-[#4A9B6E] py-4 text-sm font-medium uppercase tracking-[0.1em] text-[#0A0D0C] transition-colors hover:bg-[#68B888]"
               >
-                Submit
+                {isSubmitting ? "Sending..." : "Submit"}
               </button>
             </form>
 

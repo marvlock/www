@@ -44,14 +44,14 @@ export function Navigation({ isVisible, placement = "top" }: NavigationProps) {
   const navShellClass = "hero-nav-pill pointer-events-auto w-full max-w-5xl"
 
   const linkClass =
-    "font-pixelify text-xs font-medium uppercase tracking-[0.14em] text-white/90 transition-colors hover:text-white md:text-sm"
+    "font-pixelify text-xs font-medium uppercase tracking-[0.08em] text-white/80 transition-colors hover:text-[#4A9B6E] md:text-sm"
 
   const pill = (
     <div className={navShellClass}>
       <Link
         href="/"
         aria-label="Marvlock home"
-        className="relative flex h-11 w-11 shrink-0 overflow-hidden rounded-xl bg-transparent md:h-12 md:w-12"
+        className="relative flex h-11 w-11 shrink-0 overflow-hidden border border-white/10 bg-black/20 md:h-12 md:w-12"
       >
         <Image
           src="/marvlock-logo.png"
@@ -72,11 +72,11 @@ export function Navigation({ isVisible, placement = "top" }: NavigationProps) {
               onClick={(e) => handleSectionClick(e, link.href)}
               className={linkClass}
             >
-              {link.label}
+              <span className="text-[#4A9B6E]">/</span>{link.label.toLowerCase()}
             </a>
           ) : (
             <Link key={link.label} href={link.href} className={linkClass}>
-              {link.label}
+              <span className="text-[#4A9B6E]">/</span>{link.label.toLowerCase()}
             </Link>
           ),
         )}
@@ -85,7 +85,7 @@ export function Navigation({ isVisible, placement = "top" }: NavigationProps) {
       <button
         type="button"
         onClick={() => setIsMenuOpen(true)}
-        className="font-pixelify mr-1 rounded-full border border-white/20 px-4 py-2.5 text-xs font-medium uppercase tracking-[0.12em] text-white/90 transition-colors hover:bg-white/10 md:hidden"
+        className="font-pixelify mr-1 border border-white/20 px-4 py-2.5 text-xs font-medium uppercase tracking-[0.08em] text-white/90 transition-colors hover:border-[#4A9B6E] hover:text-[#4A9B6E] md:hidden"
       >
         Menu
       </button>
@@ -94,14 +94,14 @@ export function Navigation({ isVisible, placement = "top" }: NavigationProps) {
         <a
           href="#contact"
           onClick={(e) => handleSectionClick(e, "#contact")}
-          className="font-pixelify ml-auto shrink-0 rounded-full bg-white px-5 py-2.5 text-xs font-medium uppercase tracking-[0.1em] text-foreground transition-colors hover:bg-white/90 md:px-7 md:py-3 md:text-sm"
+          className="font-pixelify ml-auto shrink-0 bg-[#C97A3D] px-5 py-2.5 text-xs font-medium uppercase tracking-[0.08em] text-[#0A0D0C] transition-colors hover:bg-[#E09459] md:px-7 md:py-3 md:text-sm"
         >
           Contact +
         </a>
       ) : (
         <Link
           href="/#contact"
-          className="font-pixelify ml-auto shrink-0 rounded-full bg-white px-5 py-2.5 text-xs font-medium uppercase tracking-[0.1em] text-foreground transition-colors hover:bg-white/90 md:px-7 md:py-3 md:text-sm"
+          className="font-pixelify ml-auto shrink-0 bg-[#C97A3D] px-5 py-2.5 text-xs font-medium uppercase tracking-[0.08em] text-[#0A0D0C] transition-colors hover:bg-[#E09459] md:px-7 md:py-3 md:text-sm"
         >
           Contact +
         </Link>

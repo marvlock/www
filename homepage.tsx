@@ -2,7 +2,6 @@
 
 import { Footer } from "@/components/layout/Footer"
 import { HeroSection } from "@/components/sections/HeroSection"
-import { ClientsSection } from "@/components/sections/ClientsSection"
 import { ServicesShowcaseSection } from "@/components/sections/ServicesShowcaseSection"
 import { MilestonesSection } from "@/components/sections/MilestonesSection"
 import { ContactSection } from "@/components/sections/ContactSection"
@@ -15,7 +14,6 @@ export default function Component() {
       </div>
       <div className="site-bottom relative z-10 shrink-0 font-sans">
         <ServicesShowcaseSection />
-        <ClientsSection />
         <MilestonesSection />
         <ContactSection />
         <Footer />

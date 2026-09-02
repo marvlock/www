@@ -73,7 +73,7 @@ export function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
           <div className="flex flex-col md:flex-row justify-between items-end gap-10">
             <div className="max-w-xs text-sm md:text-base">
               <p className="text-lg leading-relaxed text-muted-foreground md:text-xl">
-                "We design and build digital products that define the future."
+                "Software engineering, web and app development, design, and ghostwriting."
               </p>
             </div>
             <div className="flex flex-col items-end gap-2 text-sm font-bold uppercase tracking-[0.12em]">

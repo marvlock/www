@@ -25,16 +25,16 @@ const pixelifySans = Pixelify_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://marvlock.dev'),
-  title: 'Marvlock — Design and Build Digital Products',
-  description: 'We design and build digital products that define the future. From startups to enterprises — we craft intuitive, high-performance websites, apps, and dashboards.',
+  title: 'Marvlock — Software, Web & App Studio',
+  description: 'Software engineering, web development, app development, web and app design, and ghostwriting for ambitious teams.',
   icons: {
     icon: '/marvlock-logo.png',
     shortcut: '/marvlock-logo.png',
     apple: '/marvlock-logo.png',
   },
   openGraph: {
-    title: 'Marvlock — Design and Build Digital Products',
-    description: 'We design and build digital products that define the future. From startups to enterprises — we craft intuitive, high-performance websites, apps, and dashboards.',
+    title: 'Marvlock — Software, Web & App Studio',
+    description: 'Software engineering, web development, app development, web and app design, and ghostwriting for ambitious teams.',
     images: [
       {
         url: '/marvlock-logo.png',
@@ -46,8 +46,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Marvlock — Design and Build Digital Products',
-    description: 'We design and build digital products that define the future.',
+    title: 'Marvlock — Software, Web & App Studio',
+    description: 'Software engineering, web development, app development, web and app design, and ghostwriting for ambitious teams.',
     images: ['/marvlock-logo.png'],
   },
 }
